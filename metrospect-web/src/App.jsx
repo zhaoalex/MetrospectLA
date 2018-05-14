@@ -8,6 +8,7 @@ class App extends React.Component {
       <BrowserRouter>
         <div className="app">
           <Route exact path="/" component={LandingPage} />
+          <Route path="/articles" component={ArticlePage} />
         </div>
       </BrowserRouter>
     );
