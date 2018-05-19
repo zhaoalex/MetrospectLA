@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Grid, Row, Col, Carousel, Image } from 'react-bootstrap';
 import styles from './ArticlePage.css';
-import LandingNavbar from '../../components/LandingNavbar.jsx';
 
 const imageStyle = {
   paddingTop: '20px',
@@ -58,11 +57,6 @@ export default class ArticlePage extends Component {
   render() {
     return (
       <Grid fluid={true}>
-          <Row>
-            <Col sm={12} md={12} lg={12}>
-              <LandingNavbar />
-            </Col>
-          </Row>
           <Row style={headerRowStyle}>
             <Col sm={2} md={2} lg={2}  style={equalColHeight}>
               <Image style={imageStyle} src={require("./images/backArrow.png")} responsive/>

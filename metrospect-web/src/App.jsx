@@ -15,9 +15,12 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div className="app">
-          <Route path="/articles" component={ArticlePage} />
-          <Route exact path="/" component={LandingPage} />
-          {/*<Route exact path="/eat" render={() => <ResultsPage type="eat" />} />*/}
+          <LandingNavbar />
+          <Switch>
+            <Route path="/articles" component={ArticlePage} />
+            <Route exact path="/" component={LandingPage} />
+            {/*<Route exact path="/eat" render={() => <ResultsPage type="eat" />} />*/}
+          </Switch>
         </div>
       </BrowserRouter>
     );

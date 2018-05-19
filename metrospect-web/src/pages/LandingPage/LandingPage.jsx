@@ -1,5 +1,4 @@
 import React from 'react';
-import LandingNavbar from '../../components/LandingNavbar.jsx';
 import CategoryButton from '../../components/CategoryButton.jsx';
 import SearchBar from '../../components/SearchBar.jsx';
 import "../../styles/LandingPage.css";
@@ -12,7 +11,6 @@ class LandingPage extends React.Component {
   render() {
     return (
       <div>
-        <LandingNavbar />
         <header id="header">
           <p>Logo</p>
           <h2>Hello! What do you want to do today?</h2>
