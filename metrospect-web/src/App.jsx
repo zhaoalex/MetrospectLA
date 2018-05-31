@@ -5,7 +5,7 @@ import LandingNavbar from "./components/LandingNavbar.jsx";
 import LandingPage from "./pages/LandingPage/LandingPage.jsx";
 import ArticlePage from "./pages/ArticlePage/ArticlePage.jsx";
 import ResultsPage from "./pages/ResultsPage/ResultsPage.jsx";
-import TestingApp from "./pages/Test/ride_pricing.jsx"
+// import TestingApp from "./pages/Test/ride_pricing.jsx"
 
 class App extends React.Component {
   initResultsRouting() {
@@ -20,7 +20,7 @@ class App extends React.Component {
           <Switch>
             <Route path="/articles" component={ArticlePage} />
             <Route exact path="/" component={LandingPage} />
-            <Route path="/uber" component={TestingApp} />
+            {/* <Route path="/uber" component={TestingApp} /> */}
             {<Route exact path="/eat" render={() => <ResultsPage type="eat" />} />}
           </Switch>
         </div>
