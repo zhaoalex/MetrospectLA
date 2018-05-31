@@ -23,12 +23,20 @@ class LandingPage extends React.Component {
             <CategoryButton category="Visit" onClick={this.handleButtonClick}/>
           </div>
         </header>
-        <ArticleCard
+        <div id="featured">
+          <ArticleCard
             title="Tacos at Grand Central"
             desc="Check out one of downtown Los Angeles’ biggest attractions, and the home of many foodstagrams."
             category="eat"
             img="src/pages/ArticlePage/images/tacos.png"
           />
+          <ArticleCard
+            title="Tacos at Grand Central"
+            desc="Check out one of downtown Los Angeles’ biggest attractions, and the home of many foodstagrams."
+            category="eat"
+            img="src/pages/ArticlePage/images/tacos.png"
+          />
+        </div>
       </div>
     )
   }

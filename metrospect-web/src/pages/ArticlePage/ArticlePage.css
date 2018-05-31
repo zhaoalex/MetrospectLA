@@ -1,9 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('https://fonts.googleapis.com/css?family=Roboto');
-}
+/*
 
 body, text, h1, h2, h3, h4, h5, h6, div {
   font-family: 'Roboto', sans-serif;
@@ -33,7 +28,7 @@ text {
   font-size: 18px;
   font-style: normal;
   color: #9F9F9F;
-}
+} */
 
 .imageStyle {
   padding-top: 20px;

@@ -11,3 +11,8 @@
 #quickselect-buttons {
 
 }
+
+#featured {
+  display: flex;
+  flex-direction: row;
+}

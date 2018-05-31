@@ -58,9 +58,6 @@ export default class ArticlePage extends Component {
 
   render() {
     return (
-      <html>
-      <head>
-      </head>
       <Grid fluid={true} className="noPadding">
           <Row>
             <Col xs={12} md={12} lg={12}>
@@ -94,16 +91,16 @@ export default class ArticlePage extends Component {
                     <div className="categoryBoxesStyle">0-3 hours</div>
                   </Col>
                   {/*}<Col className="categoryColStyle" sm={3} smOffset={1} md={2} mdOffset={2} lg={2} lgOffset={2}>
-                    <text className="categoryBoxesStyle">$0-15</text>
+                    <p className="categoryBoxesStyle">$0-15</p>
                   </Col>
 
                   <Col className="categoryColStyle" sm={3} smOffset={1} md={2} mdOffset={2} lg={2} lgOffset={2}>
-                    <text className="categoryBoxesStyle">6-10 miles</text>
+                    <p className="categoryBoxesStyle">6-10 miles</p>
 
                   </Col>
 
                   <Col className="categoryColStyle" sm={3} smOffset={1} md={2} mdOffset={2} lg={2} lgOffset={2}>
-                    <text className="categoryBoxesStyle">0-3 hours</text>
+                    <p className="categoryBoxesStyle">0-3 hours</p>
                   </Col>*/}
                 </Row>
               </div>
@@ -120,9 +117,9 @@ export default class ArticlePage extends Component {
             <h3 className="bodyTitleStyle">
               What to do
             </h3>
-            <text>
+            <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi enim velit, aliquam ac posuere ac, pulvinar quis elit. Nam viverra dolor vitae nibh imperdiet venenatis. Etiam at posuere nisi. Sed condimentum nulla at rutrum faucibus. Pellentesque id nibh dui. Pellentesque laoreet viverra felis. Cras turpis ligula, molestie nec feugiat ut, varius vel mauris. Donec ut vehicula dolor, sit amet consequat augue. Aliquam fringilla iaculis lacus dictum gravida. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-            </text>
+            </p>
             <Row>
               <Col sm={4} md={4} lg={4}>
                 <Image className="imageStyle" src={require("./images/temp1.png")} responsive/>
@@ -134,21 +131,21 @@ export default class ArticlePage extends Component {
                 <Image className="imageStyle" src={require("./images/temp1.png")} responsive/>
               </Col>
             </Row>
-            <text>
+            <p>
               Vestibulum lacus eros, rutrum quis urna vel, facilisis ornare lectus. Donec feugiat varius eleifend. Donec sem nisl, tristique quis semper eu, gravida id eros. Quisque tempus egestas massa sit amet lacinia. Duis eget tempor quam. Nunc sit amet quam eros. Aliquam venenatis lorem sit amet diam auctor, cursus varius enim hendrerit.
               Integer vitae mauris mauris. Proin imperdiet ex vitae metus mattis luctus. Fusce fringilla felis pharetra auctor ullamcorper. Phasellus sed mauris dolor. Donec mattis et urna in accumsan. Duis quam lacus, dictum ut velit vitae, scelerisque dictum risus. Donec mattis purus eu feugiat volutpat. Fusce in nulla nec orci luctus pellentesque. Duis in tincidunt odio. Proin sed lobortis purus. Sed rhoncus maximus risus vel posuere.
-            </text>
+            </p>
             <Image className="imageStyle" src={require("./images/temp4.png")} responsive/>
             <h3 className="bodyTitleStyle">
               How to get there
             </h3>
-            <text>
+            <p>
               First, hop on the Rapid 12 towards Palms at Westwood Plaza, right by Ackerman Union. Make sure you have 50¢ handy.
-            </text>
+            </p>
             <Image className="imageStyle" src={require("./images/map1.png")} responsive/>
-            <text>
+            <p>
               Next, you're going to take the Expo Line towards downtown until its terminus, where you'll switch to any Union Station bound metro on the lower platform. Once you get to Pershing Square, Grand Central Market is only a short walk away.
-            </text>
+            </p>
             <Image className="imageStyle" src={require("./images/map2.png")} responsive/>
             <h3 className="bodyTitleStyle">
               While you're here
@@ -162,7 +159,6 @@ export default class ArticlePage extends Component {
           </Col>
         </Row>
       </Grid>
-      </html>
     );
   }
 }
