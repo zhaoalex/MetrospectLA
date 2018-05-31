@@ -1,7 +1,100 @@
-.titleImage {
-  padding: '20px';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css?family=Roboto');
 }
 
-.headerBuffer {
-  padding: 20px;
- }
+body, text, h1, h2, h3, h4, h5, h6, div {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: lighter;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 16px;
+  font-style: normal;
+}
+
+text {
+  font-size: 18px;
+  font-style: normal;
+  color: #9F9F9F;
+}
+
+.imageStyle {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headerRowStyle {
+  background-color: #EAA451;
+}
+
+.categoryColStyle {
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+.categoryDivStyle {
+  vertical-align: middle;
+}
+
+.categoryBoxesStyle {
+  color: #9F9F9F;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+  height: 30px;
+  width: 90px;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.whiteTextStyle {
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.bodyTitleStyle {
+  color: #EAA451;
+  padding-bottom: 20px;
+  text-decoration: underline;
+
+}
+
+
+
+@media (min-width: 800px) {
+  .noPadding {
+      padding-left: 0px;
+      padding-right: 0px
+  }
+}
+
+@media(min-width: 400px) {
+  .noPadding {
+      padding-left: 0px;
+      padding-right: 0px
+  }
+}
