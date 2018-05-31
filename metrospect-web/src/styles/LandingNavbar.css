@@ -1,3 +1,20 @@
 .navbar {
   margin-bottom: 0px;
+  background-color: rgba(234, 164, 81, 1);
+  border: none;
+  border-radius: 0%;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav>li:hover {
+    background: rgb(197, 116, 18);
+  }
+
+  .navbar-nav>li>a {
+    border-bottom: 3px solid rgba(234, 164, 81, 1);
+  }
+
+  .navbar-nav>li>a:hover {
+    border-bottom: 3px solid #cc7a6f;
+  }
 }
