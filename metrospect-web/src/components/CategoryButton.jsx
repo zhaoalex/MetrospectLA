@@ -6,12 +6,14 @@ class CategoryButton extends React.Component {
     super(props);
   }
 
+  getImage = category => <img src={require(`../../public/categories/${category.toLowerCase()}.jpg`)} alt={category} />
+
   render() {
     return (
       <button className="category-button" onClick={this.props.onClick}>
-        <img src={this.props.img} alt={this.props.text} />
+        {this.getImage(this.props.category)}
         <br />
-        {this.props.text}
+        {this.props.category}
       </button>
     )
   }
