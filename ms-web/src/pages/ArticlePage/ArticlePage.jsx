@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Grid, Row, Col, Carousel, Image } from 'react-bootstrap';
 import './ArticlePage.css';
 
@@ -50,10 +50,7 @@ import './ArticlePage.css';
 // }
 
 
-export default class ArticlePage extends Component {
-
-
-
+class ArticlePage extends React.Component {
   render() {
     return (
       <Grid fluid={true} className="noPadding">
@@ -157,3 +154,5 @@ export default class ArticlePage extends Component {
     );
   }
 }
+
+export default ArticlePage;
