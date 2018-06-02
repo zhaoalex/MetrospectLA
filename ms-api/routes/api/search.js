@@ -18,7 +18,7 @@ const getSearchResults = (req, res) => {
       }
     }
   }).then(data => {
-    res.json({ results: data }); // array of search results
+    res.json({ results: data.hits.hits }); // array of search results
   }, err => {
     console.log(err.message);
     return res.json(err.message);
