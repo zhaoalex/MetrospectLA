@@ -6,7 +6,7 @@
     "server": "cd ms-api && yarn start",
     "client": "cd ms-web && yarn start",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "heroku-postbuild": "cd ms-api && yarn && yarn run build && cd .. && cd ms-web && yarn && yarn run build"
+    "heroku-postbuild": "cd ms-api && yarn && cd .. && cd ms-web && yarn && yarn run build"
   },
   "devDependencies": {
     "concurrently": "^3.5.0"
