@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CategoryIcon from './CategoryIcon.jsx';
-import "../styles/CategoryButton.css";
+import CategoryIcon from 'components/CategoryIcon.jsx';
+import "styles/CategoryButton.css";
 
 class CategoryButton extends React.Component {
   constructor(props) {

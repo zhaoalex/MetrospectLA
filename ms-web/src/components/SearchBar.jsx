@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormGroup, InputGroup, FormControl, Button, Glyphicon } from 'react-bootstrap';
-import '../styles/SearchBar.css';
+import 'styles/SearchBar.css';
 
 class SearchBar extends React.Component {
   constructor(props) {

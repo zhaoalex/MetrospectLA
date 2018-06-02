@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Grid, Row, Col } from 'react-bootstrap';
-import CategoryIcon from './CategoryIcon.jsx';
-import "../styles/ArticleCard.css";
+import CategoryIcon from 'components/CategoryIcon.jsx';
+import "styles/ArticleCard.css";
 
 class ArticleCard extends React.Component {
   constructor(props) {

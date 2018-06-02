@@ -1,7 +1,7 @@
 import React from 'react';
-import ArticleCard from '../../components/ArticleCard.jsx';
-import CategoryIcon from '../../components/CategoryIcon.jsx';
-import SearchBar from '../../components/SearchBar.jsx';
+import ArticleCard from 'components/ArticleCard.jsx';
+import CategoryIcon from 'components/CategoryIcon.jsx';
+import SearchBar from 'components/SearchBar.jsx';
 import "./ResultsPage.css";
 
 class ResultsPage extends React.Component {

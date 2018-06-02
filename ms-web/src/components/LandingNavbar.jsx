@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
-import "../styles/LandingNavbar.css";
+import "styles/LandingNavbar.css";
 
 class LandingNavbar extends React.Component {
   constructor(props) {

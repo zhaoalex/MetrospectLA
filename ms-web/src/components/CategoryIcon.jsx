@@ -1,5 +1,5 @@
 import React from 'react';
-import "../styles/CategoryIcon.css";
+import "styles/CategoryIcon.css";
 
 function CategoryIcon(props) {
   const category = props.category ? props.category : 'other';

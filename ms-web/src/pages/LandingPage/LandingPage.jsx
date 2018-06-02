@@ -1,7 +1,7 @@
 import React from 'react';
-import CategoryButton from '../../components/CategoryButton.jsx';
-import SearchBar from '../../components/SearchBar.jsx';
-import ArticleCard from '../../components/ArticleCard.jsx';
+import CategoryButton from 'components/CategoryButton.jsx';
+import SearchBar from 'components/SearchBar.jsx';
+import ArticleCard from 'components/ArticleCard.jsx';
 import "./LandingPage.css";
 
 class LandingPage extends React.Component {
