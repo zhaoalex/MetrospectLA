@@ -17,10 +17,10 @@ class LandingPage extends React.Component {
           <h2>Hello! What do you want to do today?</h2>
           <SearchBar />
           <div id="quickselect-buttons">
-            <CategoryButton category="Eat" onClick={this.handleButtonClick}/>
-            <CategoryButton category="Drink" onClick={this.handleButtonClick}/>
-            <CategoryButton category="Play" onClick={this.handleButtonClick}/>
-            <CategoryButton category="Visit" onClick={this.handleButtonClick}/>
+            <CategoryButton category="EAT" onClick={this.handleButtonClick}/>
+            <CategoryButton category="DRINK" onClick={this.handleButtonClick}/>
+            <CategoryButton category="PLAY" onClick={this.handleButtonClick}/>
+            <CategoryButton category="VISIT" onClick={this.handleButtonClick}/>
           </div>
         </header>
         <ArticleCard

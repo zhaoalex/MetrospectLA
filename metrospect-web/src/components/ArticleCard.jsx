@@ -18,10 +18,10 @@ class ArticleCard extends React.Component {
   getCategoryImage = category =>
     <img
       className="article-card-icon"
-      src={require(`../../public/categories/${category.toLowerCase()}.jpg`)}
+      src={require(`../categories/eat.jpg`)}
       alt={category}
     />
-  
+
 
   render() {
     return (

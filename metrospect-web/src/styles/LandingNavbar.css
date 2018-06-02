@@ -1,20 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 .navbar {
-  margin-bottom: 0px;
-  background-color: rgba(234, 164, 81, 1);
+  margin-bottom: 5px;
+  margin-top: 15px;
+  background-color: #FFFFFF; /*rgba(255, 152, 86, 0.69);*/
   border: none;
   border-radius: 0%;
+  font-size: 16px;
+  font-weight: lighter;
 }
 
 @media (min-width: 768px) {
   .navbar-nav>li:hover {
     background: rgb(197, 116, 18);
+    color: #FFFFFF;
   }
 
   .navbar-nav>li>a {
-    border-bottom: 3px solid rgba(234, 164, 81, 1);
+    /* border-bottom: 3px solid rgba(234, 164, 81, 1); */
+    font-family: 'Roboto', sans-serif;
+    color: #9C9C9C;
   }
 
   .navbar-nav>li>a:hover {
     border-bottom: 3px solid #cc7a6f;
+    color:  #FFFFFF;
   }
+}
+
+.navbar-brand {
+  font-family: 'Roboto', sans-serif;
+  color:  #FFFFFF;
 }

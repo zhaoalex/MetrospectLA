@@ -6,7 +6,7 @@ class CategoryButton extends React.Component {
     super(props);
   }
 
-  getImage = category => <img src={require(`../../public/categories/${category.toLowerCase()}.jpg`)} alt={category} />
+  getImage = category => <img src={require(`../categories/${category.toLowerCase()}.jpg`)} alt={category} />
 
   render() {
     return (

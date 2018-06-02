@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Grid, Row, Col, Carousel, Image } from 'react-bootstrap';
-import './ArticlePage.css';
-import LandingNavbar from '../../components/LandingNavbar.jsx';
+import '../../styles/ArticlePage.css';
+//import LandingNavbar from '../../components/LandingNavbar.jsx';
 
 
 // const imageStyle = {
@@ -62,11 +62,11 @@ export default class ArticlePage extends Component {
       <head>
       </head>
       <Grid fluid={true} className="noPadding">
-          <Row>
+          {/*}<Row>
             <Col xs={12} md={12} lg={12}>
               <LandingNavbar />
             </Col>
-          </Row>
+          </Row>*/}
           <Row className="headerRowStyle">
             <Col xs={12} md={2} lg={2}  className="equalColHeight">
               <Image className="imageStyle" src={require("./images/backArrow.png")} responsive/>
