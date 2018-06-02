@@ -6,28 +6,22 @@ var client = elasticsearch.Client({
   ]
 });
 
-search = (searchData, callback) => {
+const getSearchResults = (req, res) => {
   client.search({
     index: 'articles',
     type: 'article',
     body: {
       query: {
         match: {
-          "content": searchData
+          content: req.params.query
         }
       }
     }
-  }).then(resp => {
-    callback(resp.hits.hits); // returns array of search results 
+  }).then(data => {
+    res.json({ results: data }); // array of search results
   }, err => {
-      callback(err.message)
-      console.log(err.message);
-  });
-}
- 
-const getSearchResults = (req, res) => {
-  search(req.params.query, data => {
-    res.json({ results: data });
+    console.log(err.message);
+    return res.json(err.message);
   });
 }
 

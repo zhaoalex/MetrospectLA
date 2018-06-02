@@ -8,6 +8,7 @@ apiRouter.get('/test', (req, res) => {
   res.send({ express: 'Express backend connected!' });
 });
 
+// Add all other routers
 apiRouter.use('/search', searchRouter);
 
 // catch 404 and forward to error handler
