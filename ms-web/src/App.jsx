@@ -9,7 +9,7 @@ import ResultsPage from "./pages/ResultsPage/ResultsPage.jsx";
 
 class App extends React.Component {
   componentDidMount() {
-    fetch("/api/hello")
+    fetch("/api/test")
       .then(res => res.json())
       .then(data => {console.log(data)})
   }
