@@ -8,11 +8,11 @@ import ResultsPage from "./pages/ResultsPage/ResultsPage.jsx";
 // import TestingApp from "./pages/Test/ride_pricing.jsx"
 
 class App extends React.Component {
-  componentDidMount() {
-    fetch("/api/hello")
-      .then(res => res.json())
-      .then(data => {console.log(data)})
-  }
+  // componentDidMount() {
+  //   fetch("/api/hello")
+  //     .then(res => res.json())
+  //     .then(data => {console.log(data)})
+  // }
 
   render() {
     return (
