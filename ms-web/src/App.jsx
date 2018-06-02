@@ -6,11 +6,11 @@ import LandingPage from "./pages/LandingPage/LandingPage.jsx";
 import ArticlePage from "./pages/ArticlePage/ArticlePage.jsx";
 import ResultsPage from "./pages/ResultsPage/ResultsPage.jsx";
 // import TestingApp from "./pages/Test/ride_pricing.jsx"
+import { makeApiRequest } from './apihandler.js';
 
 class App extends React.Component {
   componentDidMount() {
-    fetch("/api/test")
-      .then(res => res.json())
+    makeApiRequest({ url: '/test', method: 'GET' })
       .then(data => {console.log(data)})
   }
 

@@ -22,16 +22,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Priority serve any static files.
-app.use(express.static(path.resolve(__dirname, '../ms-web')));
+// // Priority serve any static files.
+// app.use(express.static(path.resolve(__dirname, '../ms-web')));
 
 // Handle API requests.
 app.use('/api', routes.apiRouter);
 
-// Remaining requests return the React app, so it can handle routing.
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../ms-web', 'index.html'));
-});
+// // Remaining requests return the React app, so it can handle routing.
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, '../ms-web', 'index.js'));
+// });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
