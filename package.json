@@ -1,6 +1,14 @@
 {
-  "dependencies": {
-    "react-bootstrap": "^0.32.1",
-    "react-router-dom": "^4.2.2"
+  "name": "metrospect-la",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "server": "cd ms-api && yarn start",
+    "client": "cd ms-web && yarn start",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "heroku-postbuild": "cd ms-api && yarn && yarn run build && cd .. && cd ms-web && yarn && yarn run build"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
   }
 }
