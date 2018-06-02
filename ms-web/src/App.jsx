@@ -1,19 +1,14 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
-import LandingNavbar from "./components/LandingNavbar.jsx";
-import LandingPage from "./pages/LandingPage/LandingPage.jsx";
-import ArticlePage from "./pages/ArticlePage/ArticlePage.jsx";
-import ResultsPage from "./pages/ResultsPage/ResultsPage.jsx";
+import LandingNavbar from "components/LandingNavbar.jsx";
+import LandingPage from "pages/LandingPage/LandingPage.jsx";
+import ArticlePage from "pages/ArticlePage/ArticlePage.jsx";
+import ResultsPage from "pages/ResultsPage/ResultsPage.jsx";
+import SearchPage from "pages/SearchPage/SearchPage.jsx";
 // import TestingApp from "./pages/Test/ride_pricing.jsx"
-import { makeApiRequest } from './apihandler.js';
 
 class App extends React.Component {
-  componentDidMount() {
-    makeApiRequest({ url: '/test', method: 'GET' })
-      .then(data => {console.log(data)})
-  }
-
   render() {
     return (
       <BrowserRouter>
@@ -27,6 +22,8 @@ class App extends React.Component {
             <Route path="/drink" render={() => <ResultsPage category="drink" />} />
             <Route path="/play" render={() => <ResultsPage category="play" />} />
             <Route path="/visit" render={() => <ResultsPage category="visit" />} />
+            <Route exact path="/search" component={SearchPage} />
+            <Route path="/search/:query" component={SearchPage} />
           </Switch>
         </div>
       </BrowserRouter>
