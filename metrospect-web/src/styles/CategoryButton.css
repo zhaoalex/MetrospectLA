@@ -4,9 +4,7 @@
   background-color: brown;
 }
 
-.category-button img {
-  width: 50px;
-  height: 50px;
+.category-button-img {
   border-radius: 75%;
   box-shadow: 2px 2px rgba(0, 0, 0, 0.25);
 }
