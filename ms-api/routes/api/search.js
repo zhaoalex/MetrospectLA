@@ -15,7 +15,7 @@ const getSearchResults = (req, res) => {
       _source: {
         include: ["title", "keywords", "short_description", "category", "image"],
         exclude: ["summary", "neighborhood", "content1", "content2", "image2", "image3", "image4", "directions"]
-      }
+      },
       query: {
         match: {
           content1: req.params.query
