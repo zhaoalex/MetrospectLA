@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 import "styles/LandingNavbar.css";
 
@@ -14,20 +14,16 @@ class LandingNavbar extends React.Component {
       <Navbar fluid collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link to="/">
-              {this.props.isLanding
-                ? <p>Full Logo</p>
-                : <p>Pin Logo</p>
-                // TODO: this won't work
-              }
-            </Link>
+            <NavLink exact to="/" className="navbar-logo-inactive" activeClassName="navbar-logo-active">
+              <div className="navbar-logo-container" />
+            </NavLink>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <LinkContainer to="/">
-            <NavItem className="home">HOME</NavItem>
+            <LinkContainer exact to="/">
+              <NavItem className="home">HOME</NavItem>
             </LinkContainer>
             <LinkContainer to="/eat">
               <NavItem className="eat">EAT</NavItem>
