@@ -39,6 +39,12 @@
   align-items: center;
 }
 
+.featured-show-more {
+  font-size: 1.25em;
+  color: #FFECE8;
+  text-decoration: underline;
+}
+
 #about-us {
   max-width: 60%;
   margin: 0 auto;
@@ -68,7 +74,7 @@
 
 .footer-contents > h4 {
   margin: 5px;
-  color: lightgrey;
+  color: #FFECE8;
 }
 
 @media (max-width: 768px) {

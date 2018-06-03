@@ -8,10 +8,10 @@ function CategoryButton(props) {
 
   return (
     <div className="category-button">
-      <NavLink to={`/${category.toLowerCase()}`}>
+      <NavLink to={`/${category.toLowerCase()}`} activeClassName="category-button-active">
         <CategoryIcon category={category} className="category-button-img" />
         <br />
-        {category}
+        <p>{category.toUpperCase()}</p>
       </NavLink>
     </div>
   )

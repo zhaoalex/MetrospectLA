@@ -2,6 +2,11 @@
   border: none;
   margin: 10px;
   background-color: transparent;
+  text-align: center;
+}
+
+.category-button-active {
+
 }
 
 .category-button-img {
@@ -11,4 +16,9 @@
 
 .category-button:hover {
 
+}
+
+.category-button p {
+  font-size: 1.5em;
+  letter-spacing: 0.1875em;
 }

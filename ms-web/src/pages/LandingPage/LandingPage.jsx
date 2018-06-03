@@ -55,7 +55,7 @@ class LandingPage extends React.Component {
                 showCategory
               />
             </div>
-            <Link to="/search/">Show more</Link>
+            <Link to="/search/" className="featured-show-more">Show more</Link>
           </div>
 
         </div>
