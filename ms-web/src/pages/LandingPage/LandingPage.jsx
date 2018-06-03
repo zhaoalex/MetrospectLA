@@ -70,7 +70,7 @@ class LandingPage extends React.Component {
         </div>
         <div id="footer">
           <div className="footer-contents">
-            <h4>Made with ❤️ from the Metrospect team.</h4>
+            <h4>Made with <span role="img" aria-label="heart">❤️</span> from the Metrospect team.</h4>
           </div>
         </div>
         {this.state.fireRedirect && <Redirect to={`/search/${this.state.searchInput}`} />}
