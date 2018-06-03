@@ -6,11 +6,16 @@ var client = elasticsearch.Client({
   ]
 });
 
+
 const getSearchResults = (req, res) => {
   client.search({
     index: 'articles',
     type: 'article',
     body: {
+      _source: {
+        include: ["title", "keywords", "short_description", "category", "image"],
+        exclude: ["summary", "neighborhood", "content1", "content2", "image2", "image3", "image4", "directions"]
+      }
       query: {
         match: {
           content1: req.params.query
