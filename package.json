@@ -10,6 +10,6 @@
     "heroku-postbuild": "cd ms-api && yarn && cd .. && cd ms-web && yarn && yarn run build"
   },
   "devDependencies": {
-    "concurrently": "^3.5.0"
+    "concurrently": "^3.5.1"
   }
 }

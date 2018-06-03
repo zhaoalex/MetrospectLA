@@ -13,24 +13,28 @@ class LandingNavbar extends React.Component {
     return (
       <Navbar fluid collapseOnSelect>
         <Navbar.Header>
-          <Navbar.Brand>
-            <Link to="/">Metrospect</Link>
-          </Navbar.Brand>
+          {// <Navbar.Brand>
+          //   <Link to="/">Metrospect</Link>
+          // </Navbar.Brand>
+          }
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
+            <LinkContainer to="/">
+            <NavItem className="home">HOME</NavItem>
+            </LinkContainer>
             <LinkContainer to="/eat">
-              <NavItem>Eat</NavItem>
+              <NavItem className="eat">EAT</NavItem>
             </LinkContainer>
             <LinkContainer to="/drink">
-              <NavItem>Drink</NavItem>
+              <NavItem className="drink">DRINK</NavItem>
             </LinkContainer>
             <LinkContainer to="/play">
-              <NavItem>Play</NavItem>
+              <NavItem className="play">PLAY</NavItem>
             </LinkContainer>
             <LinkContainer to="/visit">
-              <NavItem>Visit</NavItem>
+              <NavItem className="visit">VISIT</NavItem>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>
