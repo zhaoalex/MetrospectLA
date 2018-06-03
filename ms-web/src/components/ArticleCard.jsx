@@ -16,18 +16,11 @@ class ArticleCard extends React.Component {
       alt={this.props.title}
     />
 
-  // getCategoryImage = category =>
-  //   <img
-  //     className="article-card-icon"
-  //     src={require(`../../public/categories/${category.toLowerCase()}.jpg`)}
-  //     alt={category}
-  //   />
-
   render() {
     return (
       <div className="article-card-wrapper">
         <Grid fluid className="article-card">
-          <Link to={"/articles"}>
+          <Link to={`/articles/${this.props.id}`}>
             <Col md={4} xs={4} className="article-card-image-container">
               {this.getArticlePreviewImage(this.props.img)}
             </Col>

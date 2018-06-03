@@ -15,7 +15,7 @@ class SearchPage extends React.Component {
   componentDidMount = () => {
     const query = this.props.match.params.query || '';
 
-    makeApiRequest({ url: `/search/${query}` })
+    makeApiRequest(`/api/search/${query}`)
       .then(data => {
         this.setState({
           results: data.results
@@ -26,6 +26,8 @@ class SearchPage extends React.Component {
   render() {
     const titles = this.state.results.map(r =>
       <ArticleCard
+        key={r._id}
+        id={r._id}
         title={r._source.title}
         desc={r._source.short_description}
         category={r._source.category}

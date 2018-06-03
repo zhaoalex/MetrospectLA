@@ -6,7 +6,7 @@
 
 .article-card {
   padding: 0;
-  border: 1px solid black;
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.15);
   height: 200px;
   max-width: 400px;
   margin: 20px;
