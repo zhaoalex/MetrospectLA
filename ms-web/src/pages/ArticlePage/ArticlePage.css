@@ -16,7 +16,7 @@
 }
 
 .title {
-  font: lighter 3.25em/1.2 'Overpass';
+  font: lighter 3.25em/1.2 'Overpass', sans-serif;
   color: white;
   font-weight: 1000;
   margin: 25px 0 15px 0;
@@ -118,7 +118,7 @@
 
 .whiteTextStyle {
   color: white;
-  font: 'Roboto';
+  font: 'Roboto', sans-serif;
 
 }
 
@@ -129,7 +129,7 @@
 .bodyTitleStyle {
   color: #FF6745;
   padding-bottom: 20px;
-  font: 800 2.25em 'Overpass';
+  font: 800 2.25em 'Overpass', sans-serif;
 }
 
 .article-card-contents {

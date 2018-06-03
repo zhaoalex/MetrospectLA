@@ -23,11 +23,11 @@ p {
 }
 
 h1 {
-  font: bold 3em 'Overpass';
+  font: bold 3em 'Overpass', sans-serif;
   color: white;
 }
 
 h2 {
-  font: bold 1.875em 'Overpass';
+  font: bold 1.875em 'Overpass', sans-serif;
   color: #FF6745;
 }
