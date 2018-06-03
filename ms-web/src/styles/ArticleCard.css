@@ -15,20 +15,19 @@
 
 .article-card-image-container {
   padding: 0;
-  padding-left: 15px;
   height: 100%;
 }
 
 .article-card-image {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .article-card-contents {
   height: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .article-card-contents-spacer {
@@ -42,10 +41,23 @@
   flex-direction: row;
 }
 
+.article-card-contents > h2 {
+  font-size: 20px;
+}
+.article-card-contents > p {
+  font-size: 14px;
+}
+
 .article-card-icon {
   margin-bottom: 10px;
   width: 40px;
   height: 40px;
   float: right;
   clear: right;
+}
+
+@media (max-width: 768px) {
+  .article-card-contents > p {
+    font-size: 3.1vmin;
+  }
 }

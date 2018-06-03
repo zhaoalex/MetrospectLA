@@ -14,7 +14,7 @@ class ResultsPage extends React.Component {
       <div>
         <div className="results-header">
           <div className="results-header-contents">
-            <h1>{this.props.category.toUpperCase()}</h1>
+            <CategoryIcon category={this.props.category} className="results-header-contents-icon" />
             <SearchBar />
             <p>Price</p>
             <p>Distance</p>
@@ -22,38 +22,36 @@ class ResultsPage extends React.Component {
           </div>
         </div>
         <div className="results-contents">
-          <div className="results-contents-articles">
-            <ArticleCard
-              title="Tacos at Grand Central"
-              desc="Check out one of downtown Los Angeles’ biggest attractions, and the home of many foodstagrams. blah blah blah blah blah blah blah blah"
-              category="eat"
-              img="src/pages/ArticlePage/images/tacos.png"
-            />
-            <ArticleCard
-              title="Tacos at Grand Central"
-              desc="Check out one of downtown Los Angeles’ biggest attractions, and the home of many foodstagrams."
-              category="eat"
-              img="src/pages/ArticlePage/images/tacos.png"
-            />
-            <ArticleCard
-              title="Tacos at Grand Central"
-              desc="Check out one of downtown Los Angeles’ biggest attractions, and the home of many foodstagrams."
-              category="eat"
-              img="src/pages/ArticlePage/images/tacos.png"
-            />
-            <ArticleCard
-              title="Tacos at Grand Central"
-              desc="Check out one of downtown Los Angeles’ biggest attractions, and the home of many foodstagrams."
-              category="eat"
-              img="src/pages/ArticlePage/images/tacos.png"
-            />
-            <ArticleCard
-              title="Tacos at Grand Central"
-              desc="Check out one of downtown Los Angeles’ biggest attractions, and the home of many foodstagrams."
-              category="eat"
-              img="src/pages/ArticlePage/images/tacos.png"
-            />
-          </div>
+          <ArticleCard
+            title="Tacos at Grand Central"
+            desc="Check out one of downtown Los Angeles’ biggest attractions, and the home of many foodstagrams. blah blah blah blah blah blah blah blah"
+            category="eat"
+            img="src/pages/ArticlePage/images/tacos.png"
+          />
+          <ArticleCard
+            title="Tacos at Grand Central"
+            desc="Check out one of downtown Los Angeles’ biggest attractions, and the home of many foodstagrams."
+            category="eat"
+            img="src/pages/ArticlePage/images/tacos.png"
+          />
+          <ArticleCard
+            title="Tacos at Grand Central"
+            desc="Check out one of downtown Los Angeles’ biggest attractions, and the home of many foodstagrams."
+            category="eat"
+            img="src/pages/ArticlePage/images/tacos.png"
+          />
+          <ArticleCard
+            title="Tacos at Grand Central"
+            desc="Check out one of downtown Los Angeles’ biggest attractions, and the home of many foodstagrams."
+            category="eat"
+            img="src/pages/ArticlePage/images/tacos.png"
+          />
+          <ArticleCard
+            title="Tacos at Grand Central"
+            desc="Check out one of downtown Los Angeles’ biggest attractions, and the home of many foodstagrams."
+            category="eat"
+            img="src/pages/ArticlePage/images/tacos.png"
+          />
         </div>
       </div>
     )

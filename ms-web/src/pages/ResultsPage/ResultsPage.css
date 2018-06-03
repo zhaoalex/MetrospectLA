@@ -1,5 +1,5 @@
 .results-header {
-  background-color: grey;
+  background-color: #FF6745;
   min-height: 15em;
   display: flex;
   justify-content: center;
@@ -19,9 +19,12 @@
 }
 
 .results-contents {
-  max-width: 60%;
+  max-width: 80%;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .results-contents-options {
@@ -36,14 +39,14 @@
   flex-direction: row;
 }
 
-.results-contents-articles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
 .results-contents-articles > .article-card-wrapper {
   flex: 1 0 50%;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .results-contents {
+    max-width: initial;
+
+  }
 }

@@ -106,3 +106,28 @@
   } */
 
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    min-height: initial;
+  }
+
+  .navbar > .container-fluid {
+    min-height: initial;
+    transform: initial;
+    margin: initial;
+  }
+
+  .navbar-brand {
+    height: initial;
+    transform: initial;
+    padding: 5px;
+  }
+
+  .navbar-logo-active > .navbar-logo-container,
+  .navbar-logo-inactive > .navbar-logo-container {
+    height: 40px;
+    width: 71px;
+    background: url('../public/logo-pin.png');
+  }
+}

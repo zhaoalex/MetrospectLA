@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import CategoryIcon from 'components/CategoryIcon.jsx';
 import "styles/CategoryButton.css";
 
@@ -17,11 +17,11 @@ class CategoryButton extends React.Component {
 
     return (
       <div className="category-button">
-        <Link to={`/${category.toLowerCase()}`}>
+        <NavLink to={`/${category.toLowerCase()}`}>
           <CategoryIcon category={category} className="category-button-img" />
           <br />
           {category}
-        </Link>
+        </NavLink>
       </div>
     )
   }

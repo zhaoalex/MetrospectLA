@@ -5,7 +5,7 @@ import './ArticlePage.css';
 class ArticlePage extends React.Component {
   render() {
     return (
-      <Grid fluid={true} className="noPadding">
+      <Grid fluid className="noPadding">
           <Row className="headerRowStyle">
             <Col xs={0} md={2} lg={2}  className="">
               <div className="boxOne"></div>

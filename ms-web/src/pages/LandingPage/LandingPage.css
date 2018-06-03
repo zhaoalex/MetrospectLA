@@ -9,6 +9,7 @@
   background-color: grey;
   height: 85%;
   min-height: 25em;
+  padding: 10px;
 }
 
 #quickselect-buttons {
@@ -19,4 +20,5 @@
 #featured {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }

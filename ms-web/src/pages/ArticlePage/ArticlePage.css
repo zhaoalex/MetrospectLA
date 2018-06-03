@@ -3,11 +3,11 @@
   background-color: #FFFFFF;
   height: 100%;
   position: absolute;
-  right: 0px;
+  right: 0;
 }
 
 .inline {
-  display:inline-block;
+  display: inline-block;
   float: left;
 }
 
@@ -16,18 +16,18 @@
 }
 
 .title {
-  font: lighter 48px 'Overpass';
-  color: #FFFFFF;
+  font: lighter 3.25em 'Overpass';
+  color: white;
   font-weight: 1000;
-  margin: 25px 0px 15px 0px;
+  margin: 25px 0 15px 0;
 }
 
 .location {
-  font-size: 16px;
-  color: #FFFFFF;
+  font-size: 1em;
+  color: white;
   font-weight: 100;
-  display:inline;
-  margin: 0px;
+  display: inline;
+  margin: 0;
 }
 
 .location_div {
@@ -39,7 +39,7 @@
 }
 
 .oneLiner {
-  font-size: 20px;
+  font-size: 1.2em;
   color: #FFFFFF;
   font-weight: 500 ;
 }
@@ -49,7 +49,7 @@
   display: flex;
   flex-direction: row;
   vertical-align: middle;
-  padding: 0px;
+  padding: 0;
   background-color: #FFFFFF;
 }
 
@@ -59,15 +59,9 @@
   border-width: 5px;
   border-color: #FFFFFF;
   background-color: #FFFFFF;
-  padding: 0px;
+  padding: 0;
   display:inline;
   width: 100%;
-}
-
-p {
-  font-size: 18px;
-  font-style: normal;
-  color: #9F9F9F;
 }
 
 .imageStyle {
@@ -82,7 +76,7 @@ p {
   /* margin-left: auto;
   margin-right: auto;
   width: 100%; */
-  display:inline;
+  display: inline;
   height: 13px;
   margin-right: 4px;
 }
@@ -123,24 +117,24 @@ p {
 }
 
 .whiteTextStyle {
-  color: #FFFFFF;
-  font-family: 'Roboto', sans-serif;
+  color: white;
+  font: 'Roboto';
 
 }
 
 .body {
-  padding: 0px;
+  padding: 0;
 }
 
 .bodyTitleStyle {
   color: #FF6745;
   padding-bottom: 20px;
-  font: 800 36px 'Overpass';
+  font: 800 2.25em 'Overpass';
 }
 
 @media (min-width: 768px) {
   .noPadding {
-      padding-left: 0px;
-      padding-right: 0px;
+      padding-left: 0;
+      padding-right: 0;
   }
 }

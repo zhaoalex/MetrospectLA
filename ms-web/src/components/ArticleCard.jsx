@@ -21,10 +21,10 @@ class ArticleCard extends React.Component {
       <div className="article-card-wrapper">
         <Grid fluid className="article-card">
           <Link to={`/articles/${this.props.id}`}>
-            <Col md={4} xs={4} className="article-card-image-container">
+            <Col md={5} xs={5} className="article-card-image-container">
               {this.getArticlePreviewImage(this.props.img)}
             </Col>
-            <Col md={8} xs={8} className="article-card-contents">
+            <Col md={7} xs={7} className="article-card-contents">
               {this.props.showCategory && <div className="article-card-contents-spacer" />}
               {this.props.showCategory && <CategoryIcon category={this.props.category} className="article-card-icon" />}
               <h2 style={{ margin: "5px 0" }}>{this.props.title}</h2>
