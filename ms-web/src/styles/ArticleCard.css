@@ -11,6 +11,7 @@
   max-width: 400px;
   margin: 20px;
   cursor: pointer;
+  background-color: white;
 }
 
 .article-card-image-container {
