@@ -9,31 +9,32 @@ class LandingPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      fireRedirect: false
+      searchQuery: null
     };
   }
 
-  handleButtonClick() {
-    console.log("clicked");
-  }
-
-  redirectSearch = e => {
-    e.preventDefault();
-    this.setState({ fireRedirect: true });
+  redirectSearch = query => {
+    this.setState({
+      searchQuery: query
+    });
   }
 
   render() {
+    if (this.state.searchQuery) {
+      return <Redirect to={`/search/${this.state.searchQuery}`} />
+    }
+
     return (
       <div style={{ height: "100vh" }}>
         <header id="header">
           <p>Logo</p>
           <h1>Hello! What do you want to do today?</h1>
-          <SearchBar handleSubmit={this.redirectSearch} />
+          <SearchBar submit={this.redirectSearch} />
           <div id="quickselect-buttons">
-            <CategoryButton category="Eat" onClick={this.handleButtonClick}/>
-            <CategoryButton category="Drink" onClick={this.handleButtonClick}/>
-            <CategoryButton category="Play" onClick={this.handleButtonClick}/>
-            <CategoryButton category="Visit" onClick={this.handleButtonClick}/>
+            <CategoryButton category="Eat" />
+            <CategoryButton category="Drink" />
+            <CategoryButton category="Play" />
+            <CategoryButton category="Visit" />
           </div>
         </header>
         <div id="featured">
@@ -73,7 +74,6 @@ class LandingPage extends React.Component {
             <h4>Made with <span role="img" aria-label="heart">❤️</span> from the Metrospect team.</h4>
           </div>
         </div>
-        {this.state.fireRedirect && <Redirect to={`/search/${this.state.searchInput}`} />}
       </div>
     )
   }

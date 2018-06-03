@@ -17,10 +17,15 @@ class SearchBar extends React.Component {
     });
   }
 
+  onSubmit = e => {
+    e.preventDefault();
+    this.props.submit(this.state.searchInput);
+  }
+
   render() {
     return (
       <div className="search-bar">
-        <form onSubmit={this.props.handleSubmit}>
+        <form onSubmit={this.onSubmit}>
           <FormGroup>
             <InputGroup>
               <FormControl

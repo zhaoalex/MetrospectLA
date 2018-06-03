@@ -22,8 +22,7 @@ class ResultsPage extends React.Component {
       })
   }
 
-  updateOnSearch = e => {
-    e.preventDefault();
+  updateOnSearch = query => {
     // TODO: will probably act more as a filter?
   }
 
@@ -40,6 +39,8 @@ class ResultsPage extends React.Component {
       />
     )
 
+
+
     return (
       <div>
         <div className="results-header">
@@ -47,7 +48,7 @@ class ResultsPage extends React.Component {
             {this.props.category &&
                 <CategoryIcon category={this.props.category} className="results-header-icon" />
             }
-            <SearchBar handleSubmit={this.updateOnSearch} />
+            <SearchBar submit={this.updateOnSearch} />
             <p>Price</p>
             <p>Distance</p>
             <p>Time</p>
