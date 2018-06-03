@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormGroup, InputGroup, FormControl, Button, Glyphicon } from 'react-bootstrap';
+import { Redirect } from 'react-router-dom';
 import 'styles/SearchBar.css';
 
 class SearchBar extends React.Component {
@@ -7,20 +8,26 @@ class SearchBar extends React.Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.state = {
-      searchInput: ""
+      searchInput: "",
+      fireRedirect: false
     }
   }
 
-  handleChange(e) {
+  handleChange = e => {
     this.setState({
       searchInput: e.target.value
     });
   }
 
+  submitForm = e => {
+    e.preventDefault();
+    this.setState({ fireRedirect: true });
+  }
+
   render() {
     return (
       <div className="search-bar">
-        <form>
+        <form onSubmit={this.submitForm}>
           <FormGroup>
             <InputGroup>
               <FormControl
@@ -30,13 +37,14 @@ class SearchBar extends React.Component {
                 onChange={this.handleChange}
               />
               <InputGroup.Button>
-                <Button>
+                <Button type="submit">
                   <Glyphicon glyph="search" />
                 </Button>
               </InputGroup.Button>
             </InputGroup>
           </FormGroup>
         </form>
+        {this.state.fireRedirect && <Redirect to={`/search/${this.state.searchInput}`} />}
       </div>
     )
   }

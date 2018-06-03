@@ -29,12 +29,14 @@ class LandingPage extends React.Component {
             desc="Check out one of downtown Los Angeles’ biggest attractions, and the home of many foodstagrams."
             category="eat"
             img="src/pages/ArticlePage/images/tacos.png"
+            showCategory
           />
           <ArticleCard
             title="Tacos at Grand Central"
             desc="Check out one of downtown Los Angeles’ biggest attractions, and the home of many foodstagrams."
             category="eat"
             img="src/pages/ArticlePage/images/tacos.png"
+            showCategory
           />
         </div>
       </div>

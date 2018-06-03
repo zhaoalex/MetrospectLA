@@ -32,9 +32,14 @@ class ArticleCard extends React.Component {
               {this.getArticlePreviewImage(this.props.img)}
             </Col>
             <Col md={8} xs={8} className="article-card-contents">
-              <div className="article-card-contents-spacer" />
-              <CategoryIcon category={this.props.category} className="article-card-icon" />
-              <h2 style={{ margin: "10px 0" }}>{this.props.title}</h2>
+              {this.props.showCategory && <div className="article-card-contents-spacer" />}
+              {this.props.showCategory && <CategoryIcon category={this.props.category} className="article-card-icon" />}
+              <h2 style={{ margin: "5px 0" }}>{this.props.title}</h2>
+              <div className="article-card-contents-summaries">
+                <p>Thing</p>
+                <p>Thing</p>
+                <p>Thing</p>
+              </div>
               <p>{this.props.desc}</p>
             </Col>
           </Link>
