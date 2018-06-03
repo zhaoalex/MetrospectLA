@@ -13,6 +13,7 @@ const getSearchResults = (req, res) => {
     body: {
       query: {
         match: {
+          term: ["title", "keywords", "short_description", "category", "image1"]
           content: req.params.query
         }
       }
