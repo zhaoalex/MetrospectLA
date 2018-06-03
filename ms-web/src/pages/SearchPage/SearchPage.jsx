@@ -5,21 +5,31 @@ import './SearchPage.css';
 class SearchPage extends React.Component {
   constructor(props) {
     super(props);
-    const query = props.match.params.query || '';
     this.state = {
       results: []
     }
+  }
+
+  componentDidMount = () => {
+    const query = this.props.match.params.query || '';
+
     makeApiRequest({ url: `/search/${query}` })
       .then(data => {
-        this.state = {
-          results: data
-        };
+        this.setState({
+          results: data.results
+        });
       })
   }
 
   render() {
+    const titles = this.state.results.map(r =>
+      <p>{r._source.title}</p>
+    )
+
     return (
-      <p>{this.state.results.join()}</p>
+      <div>
+        {titles}
+      </div>
     )
   }
 }

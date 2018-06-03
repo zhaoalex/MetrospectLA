@@ -13,7 +13,7 @@ const getSearchResults = (req, res) => {
     body: {
       query: {
         match: {
-          content: req.params.query
+          content1: req.params.query
         }
       }
     }

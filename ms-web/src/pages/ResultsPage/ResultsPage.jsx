@@ -13,18 +13,15 @@ class ResultsPage extends React.Component {
     return (
       <div>
         <div className="results-header">
-          <CategoryIcon category={this.props.category} className="results-header-icon" />
-          <h1>{this.props.category.toUpperCase()}</h1>
+          <div className="results-header-contents">
+            <h1>{this.props.category.toUpperCase()}</h1>
+            <SearchBar />
+            <p>Price</p>
+            <p>Distance</p>
+            <p>Time</p>
+          </div>
         </div>
         <div className="results-contents">
-          <div className="results-contents-options">
-            <SearchBar />
-            <div className="results-contents-options-filters">
-              <p>Price</p>
-              <p>Distance</p>
-              <p>Time</p>
-            </div>
-          </div>
           <div className="results-contents-articles">
             <ArticleCard
               title="Tacos at Grand Central"

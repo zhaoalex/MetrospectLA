@@ -37,6 +37,11 @@
   float: right;
 }
 
+.article-card-contents-summaries {
+  display: flex;
+  flex-direction: row;
+}
+
 .article-card-icon {
   margin-bottom: 10px;
   width: 40px;
