@@ -34,7 +34,7 @@ app.use('/api', routes.apiRouter);
 // (also production only)
 if (process.env.NODE_ENV === "production") {
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../ms-web', 'index.html'));
+    res.sendFile(path.resolve(__dirname, '../ms-web/build', 'index.html'));
   });
 }
 
