@@ -78,6 +78,10 @@
 }
 
 @media (max-width: 768px) {
+  #featured {
+    padding: 0;
+  }
+
   .featured-contents {
     width: 100%;
   }
