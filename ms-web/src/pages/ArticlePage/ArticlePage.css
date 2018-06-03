@@ -132,6 +132,10 @@
   font: 800 2.25em 'Overpass';
 }
 
+.article-card-contents {
+  padding: 0 10px;
+}
+
 @media (min-width: 768px) {
   .noPadding {
       padding-left: 0;

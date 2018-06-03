@@ -44,7 +44,7 @@ class ArticlePage extends React.Component {
 
             </Col>
           </Row>
-          <Row>
+          <Row className="article-contents">
           <Col sm={2} md={2} lg={2}>
 
           </Col>

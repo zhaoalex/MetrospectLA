@@ -76,6 +76,6 @@
 
 @media (max-width: 768px) {
   .article-card-contents > p {
-    font-size: 3.1vmin;
+    font-size: 3vmin;
   }
 }
