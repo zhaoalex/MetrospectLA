@@ -41,9 +41,26 @@
   flex-direction: row;
 }
 
-.article-card-contents > h2 {
+.article-card-contents-title {
+  margin: 5px 0;
   font-size: 20px;
+  color: #FF6745;
 }
+
+.article-card-contents-title.eat {
+  color: #FFB029;
+}
+.article-card-contents-title.drink {
+  color: #30A5CA;
+}
+.article-card-contents-title.play {
+  color: #FF6745;
+}
+.article-card-contents-title.visit {
+  color: #92CF10;
+}
+
+
 .article-card-contents > p {
   font-size: 14px;
 }

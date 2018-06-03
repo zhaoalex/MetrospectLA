@@ -1,14 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Col } from 'react-bootstrap';
 import CategoryIcon from 'components/CategoryIcon.jsx';
 import "styles/ArticleCard.css";
 
 class ArticleCard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   getArticlePreviewImage = img =>
     <img
       className="article-card-image"
@@ -17,23 +13,25 @@ class ArticleCard extends React.Component {
     />
 
   render() {
+    const {id, title, desc, category, img, showCategory } = this.props;
+
     return (
       <div className="article-card-wrapper">
         <Grid fluid className="article-card">
-          <Link to={`/articles/${this.props.id}`}>
+          <Link to={`/articles/${id}`}>
             <Col md={5} xs={5} className="article-card-image-container">
-              {this.getArticlePreviewImage(this.props.img)}
+              {this.getArticlePreviewImage(img)}
             </Col>
             <Col md={7} xs={7} className="article-card-contents">
-              {this.props.showCategory && <div className="article-card-contents-spacer" />}
-              {this.props.showCategory && <CategoryIcon category={this.props.category} className="article-card-icon" />}
-              <h2 style={{ margin: "5px 0" }}>{this.props.title}</h2>
+              {showCategory && <div className="article-card-contents-spacer" />}
+              {showCategory && <CategoryIcon category={category} className="article-card-icon" />}
+              <h2 className={["article-card-contents-title", category].join(' ')}>{title}</h2>
               <div className="article-card-contents-summaries">
                 <p>Thing</p>
                 <p>Thing</p>
                 <p>Thing</p>
               </div>
-              <p>{this.props.desc}</p>
+              <p>{desc}</p>
             </Col>
           </Link>
         </Grid>
