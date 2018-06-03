@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeApiRequest } from 'apihandler.js';
+import ArticleCard from 'components/ArticleCard.jsx';
 import './SearchPage.css';
 
 class SearchPage extends React.Component {
@@ -23,7 +24,12 @@ class SearchPage extends React.Component {
 
   render() {
     const titles = this.state.results.map(r =>
-      <p>{r._source.title}</p>
+      <ArticleCard
+        title={r._source.title}
+        desc={r._source.short_description}
+        category={r._source.category}
+        img={r._source.image1}
+      />
     )
 
     return (
