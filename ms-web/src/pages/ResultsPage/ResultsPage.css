@@ -3,6 +3,7 @@
   min-height: 15em;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .results-header-contents {
@@ -20,7 +21,7 @@
 
 .results-contents {
   max-width: 80%;
-  margin: 0 auto;
+  margin: 10px auto 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

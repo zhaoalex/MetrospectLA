@@ -16,7 +16,7 @@
 }
 
 .title {
-  font: lighter 3.25em 'Overpass';
+  font: lighter 3.25em/1.2 'Overpass';
   color: white;
   font-weight: 1000;
   margin: 25px 0 15px 0;
