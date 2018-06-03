@@ -13,10 +13,15 @@ class LandingNavbar extends React.Component {
     return (
       <Navbar fluid collapseOnSelect>
         <Navbar.Header>
-          {// <Navbar.Brand>
-          //   <Link to="/">Metrospect</Link>
-          // </Navbar.Brand>
-          }
+          <Navbar.Brand>
+            <Link to="/">
+              {this.props.isLanding
+                ? <p>Full Logo</p>
+                : <p>Pin Logo</p>
+                // TODO: this won't work
+              }
+            </Link>
+          </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>

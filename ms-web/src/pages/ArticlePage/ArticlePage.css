@@ -1,14 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Overpass');
-
-@font-face {
-    font-family: 'Overpass';
-    src: url('https://fonts.googleapis.com/css?family=Overpass');
-}
-
-body, text, h1, h2, h3, h4, h5, h6, div {
-  font-family: 'Roboto', sans-serif;
-}
-
 .whiteDiv {
   width: 22px;
   background-color: #FFFFFF;
@@ -27,9 +16,7 @@ body, text, h1, h2, h3, h4, h5, h6, div {
 }
 
 .title {
-  font-size: 48px;
-  font-weight: lighter;
-  font-family: 'Overpass';
+  font: lighter 48px 'Overpass';
   color: #FFFFFF;
   font-weight: 1000;
   margin: 25px 0px 15px 0px;
@@ -148,9 +135,7 @@ p {
 .bodyTitleStyle {
   color: #FF6745;
   padding-bottom: 20px;
-  font-family: 'Overpass';
-  font-size: 36px;
-  font-weight: 800;
+  font: 800 36px 'Overpass';
 }
 
 @media (min-width: 768px) {

@@ -2,6 +2,7 @@ import React from 'react';
 import { makeApiRequest } from 'apihandler.js';
 import ArticleCard from 'components/ArticleCard.jsx';
 import './SearchPage.css';
+import 'pages/ResultsPage/ResultsPage.css';
 
 class SearchPage extends React.Component {
   constructor(props) {
@@ -33,7 +34,7 @@ class SearchPage extends React.Component {
     )
 
     return (
-      <div>
+      <div className="results-contents-articles">
         {titles}
       </div>
     )
