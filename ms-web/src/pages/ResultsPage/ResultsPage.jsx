@@ -53,7 +53,7 @@ class ResultsPage extends React.Component {
           </div>
         </div>
         <div className="results-contents">
-          {(articles && articles.length !== 0) || <h2>Sorry, no results!</h2>}
+          {(articles.length !== 0 && articles) || <h2>Sorry, no results!</h2>}
         </div>
       </div>
     )
