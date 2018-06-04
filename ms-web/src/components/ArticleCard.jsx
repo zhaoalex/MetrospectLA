@@ -24,7 +24,7 @@ class ArticleCard extends React.Component {
             </Col>
             <Col md={7} xs={7} className="article-card-contents">
               {showCategory && <div className="article-card-contents-spacer" />}
-              {showCategory && <CategoryIcon category={category} className="article-card-icon" />}
+              {showCategory && <CategoryIcon fill category={category} className="article-card-icon" />}
               <h2 className={["article-card-contents-title", category].join(' ')}>{title}</h2>
               <div className="article-card-contents-summaries">
                 <p>Thing</p>

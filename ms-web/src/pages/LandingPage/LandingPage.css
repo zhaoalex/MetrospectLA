@@ -26,8 +26,7 @@
 }
 
 .featured-contents {
-  display: flex;
-  flex-direction: column;
+  display: block;
   width: 80%;
   margin: 0 auto;
 }
@@ -79,11 +78,16 @@
 
 @media (max-width: 768px) {
   #featured {
-    padding: 0;
+    padding: 10px 0;
   }
 
   .featured-contents {
     width: 100%;
+    text-align: center;
+  }
+
+  .featured-contents-cards {
+    text-align: initial;
   }
 
   .featured-contents > h1, .featured-contents > a {
