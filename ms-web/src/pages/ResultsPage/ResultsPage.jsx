@@ -47,9 +47,10 @@ class ResultsPage extends React.Component {
                 <CategoryIcon fill size={150} category={this.props.category} className="results-header-icon" />
             }
             <SearchBar submit={this.updateOnSearch} />
-            <p>Price</p>
-            <p>Distance</p>
-            <p>Time</p>
+          {//   <p>Price</p>
+          //   <p>Distance</p>
+          //   <p>Time</p>
+          }
           </div>
         </div>
         <div className="results-contents">
