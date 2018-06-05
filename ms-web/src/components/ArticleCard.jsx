@@ -13,7 +13,7 @@ class ArticleCard extends React.Component {
     />
 
   render() {
-    const {id, title, desc, category, img, price, showCategory } = this.props;
+    const {id, title, desc, category, img, price, time, distance, showCategory } = this.props;
 
     return (
       <div className="article-card-wrapper">
@@ -27,9 +27,9 @@ class ArticleCard extends React.Component {
               {showCategory && <CategoryIcon fill category={category} className="article-card-icon" />}
               <h2 className={["article-card-contents-title", category].join(' ')}>{title}</h2>
               <div className="article-card-contents-summaries">
-                <p>{price}</p>
-                <p>Thing</p>
-                <p>Thing</p>
+                <div className="article-card-summary-items">{price}</div>
+                <div className="article-card-summary-items article-card-summary-trip-time ">{time}</div>
+                <div className="article-card-summary-items">{distance}</div>
               </div>
               <p>{desc}</p>
             </Col>

@@ -51,6 +51,8 @@ class ResultsPage extends React.Component {
         category={r._source.category}
         img={r._source.image1}
         price={r._source.summary.price}
+        time={r._source.summary.time}
+        distance={r._source.summary.distance}
         showCategory={!this.props.category}
       />
     )

@@ -66,6 +66,16 @@ class LandingPage extends React.Component {
             <h1 id="featured_header">FEATURED</h1>
             <div className="featured-contents-cards">
               {articles}
+              <ArticleCard
+                key="test"
+                id="test"
+                title="Pho"
+                desc="This is tasty"
+                category="Eat"
+                img=""
+                price="$$"
+                showCategory={!this.props.category}
+              />
             </div>
             <Link to="/search/" className="featured-show-more">View more</Link>
           </div>
