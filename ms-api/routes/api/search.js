@@ -31,7 +31,7 @@ const getSearchResults = (req, res) => {
     }
     reqBody = Object.assign({}, reqBody, additionalBody);
   }
-  
+
   client.search(reqBody).then(data => {
     res.json({ results: data.hits.hits }); // array of search results
   }, err => {
@@ -46,8 +46,8 @@ const getCategoryResults = (req, res) => {
     type: 'article',
     body: {
       _source: {
-        include: ["title", "keywords", "short_description", "category", "image1"],
-        exclude: ["summary", "neighborhood", "content1", "content2", "image2", "image3", "image4", "directions"]
+        include: ["title", "keywords", "short_description", "category", "summary", "image1"],
+        exclude: ["neighborhood", "content1", "content2", "image2", "image3", "image4", "directions"]
       },
       query: {
         match: {
