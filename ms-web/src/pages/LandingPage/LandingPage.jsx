@@ -27,8 +27,10 @@ class LandingPage extends React.Component {
     return (
       <div style={{ height: "100vh" }}>
         <header id="header">
-          <p>Logo</p>
-          <h1>Hello! What do you want to do today?</h1>
+          <div id="banner">
+
+          </div>
+          <h1>Making sure everyone gets around!</h1>
           <SearchBar submit={this.redirectSearch} />
           <div id="quickselect-buttons">
             <CategoryButton category="Eat" />
@@ -39,7 +41,7 @@ class LandingPage extends React.Component {
         </header>
         <div id="featured">
           <div className="featured-contents">
-            <h1>FEATURED</h1>
+            <h1 className="section_headers" id="featured_header">FEATURED</h1>
             <div className="featured-contents-cards">
               <ArticleCard
                 title="Tacos at Grand Central"
@@ -56,17 +58,17 @@ class LandingPage extends React.Component {
                 showCategory
               />
             </div>
-            <Link to="/search/" className="featured-show-more">Show more</Link>
+            <Link to="/search/" className="featured-show-more">View more</Link>
           </div>
 
         </div>
         <div id="about-us">
           <div className="about-us-text">
-            <h1 style={{ color: "#FF6745" }}>ABOUT US</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi enim velit, aliquam ac posuere ac, pulvinar quis elit. Nam viverra dolor vitae nibh imperdiet venenatis. Etiam at posuere nisi. Sed condimentum nulla at rutrum faucibus. Pellentesque id nibh dui.</p>
+            <h1 class="section_headers" id="about_header">ABOUT US</h1>
+            <p id="about_us_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi enim velit, aliquam ac posuere ac, pulvinar quis elit. Nam viverra dolor vitae nibh imperdiet venenatis. Etiam at posuere nisi. Sed condimentum nulla at rutrum faucibus. Pellentesque id nibh dui.</p>
           </div>
           <div className="about-us-pics">
-            <p>Pic</p>
+            <img id="team_pic" src={require("./Images/team.jpg")} alt="We the squad."/>
           </div>
         </div>
         <div id="footer">
