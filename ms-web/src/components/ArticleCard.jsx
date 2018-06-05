@@ -8,7 +8,7 @@ class ArticleCard extends React.Component {
   getArticlePreviewImage = img =>
     <img
       className="article-card-image"
-      src={require(`../pages/ArticlePage/images/tacos.png`)}
+      src={this.props.img}
       alt={this.props.title}
     />
 

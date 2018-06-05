@@ -9,21 +9,36 @@ class ResultsPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      results: []
+      results: [],
+      query: ''
     }
 
-    // TODO: handle categories
-    const query = (this.props.match && this.props.match.params && this.props.match.params.query) || 'quiet';
-    makeApiRequest(`/api/search/${query}`)
+    const query = (this.props.match && this.props.match.params && this.props.match.params.query) || this.props.category || '';
+
+    makeApiRequest(`/api/search/${query === this.props.category ? `category/${this.props.category}` : query}`)
       .then(data => {
         this.setState({
-          results: data.results
+          results: data.results,
+          query
+        });
+      })
+  }
+
+  componentDidUpdate = (prevProps, prevState) => {
+    const query = (this.props.match && this.props.match.params && this.props.match.params.query) || this.props.category || '';
+    if (query === prevState.query) return;
+
+    makeApiRequest(`/api/search/${query === this.props.category ? `category/${this.props.category}` : query}`)
+      .then(data => {
+        this.setState({
+          results: data.results,
+          query
         });
       })
   }
 
   updateOnSearch = query => {
-    // TODO: will probably act more as a filter?
+
   }
 
   render() {
@@ -54,7 +69,7 @@ class ResultsPage extends React.Component {
           </div>
         </div>
         <div className="results-contents">
-          {(articles.length !== 0 && articles) || <h2>Sorry, no results!</h2>}
+          {(articles.length !== 0 && articles) || <h2>Getting results...</h2>}
         </div>
       </div>
     )
