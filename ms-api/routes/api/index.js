@@ -2,6 +2,7 @@ var express = require('express');
 var apiRouter = express.Router();
 
 var searchRouter = require('./search.js');
+var articleRouter = require('./article.js');
 
 // Test API call
 apiRouter.get('/test', (req, res) => {
@@ -10,6 +11,7 @@ apiRouter.get('/test', (req, res) => {
 
 // Add all other routers
 apiRouter.use('/search', searchRouter);
+apiRouter.use('/article', articleRouter);
 
 // catch 404 and forward to error handler
 apiRouter.use(function(req, res, next) {
