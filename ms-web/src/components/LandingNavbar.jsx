@@ -21,7 +21,7 @@ class LandingNavbar extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <LinkContainer to="/">
+            <LinkContainer to="">
             <NavItem className="home">HOME</NavItem>
             </LinkContainer>
             <LinkContainer to="/eat">

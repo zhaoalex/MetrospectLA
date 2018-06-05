@@ -14,7 +14,9 @@ class LandingPage extends React.Component {
       <div style={{ height: "100vh" }}>
         <header id="header">
           <p>Logo</p>
-          <h2>Hello! What do you want to do today?</h2>
+          <div id="tagLineDiv">
+            <h2 id="tagLine">We get around!</h2>
+          </div>
           <SearchBar />
           <div id="quickselect-buttons">
             <CategoryButton category="Eat" onClick={this.handleButtonClick}/>

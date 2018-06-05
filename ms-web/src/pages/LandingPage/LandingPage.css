@@ -6,9 +6,22 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  background-color: grey;
+  background-color: white;
   height: 85%;
   min-height: 25em;
+}
+
+#tagLineDiv {
+  height: 90px;
+  width: 100%;
+  background-color: #FF6745;
+}
+
+#tagLine {
+  font-family: 'Roboto';
+  font-size: 44px;
+  font-weight: lighter;
+  color: #FFFFFF;
 }
 
 #quickselect-buttons {

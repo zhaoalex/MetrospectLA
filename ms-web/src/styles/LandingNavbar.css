@@ -25,7 +25,7 @@
   background-color: #FFFFFF;
 }
 
-.navbar-default .navbar-nav>li.home>a:hover {
+.navbar-default .navbar-nav>li.home>a:hover, .navbar-default .navbar-nav>li.home.active>a  {
   color: #333333;
 }
 
