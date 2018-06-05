@@ -6,8 +6,41 @@ var client = elasticsearch.Client({
   ]
 });
 
-
 const getSearchResults = (req, res) => {
+  let reqBody = {
+    index: 'articles',
+    type: 'article',
+    body: {
+      _source: {
+        include: ["title", "keywords", "short_description", "category", "image1"],
+        exclude: ["summary", "neighborhood", "content1", "content2", "image2", "image3", "image4", "directions"]
+      }
+    }
+  };
+
+  if (req.params.query) {
+    const additionalBody = {
+      body: {
+        ...reqBody.body,
+        query: {
+          match: {
+            content1: req.params.query
+          }
+        }
+      }
+    }
+    reqBody = Object.assign({}, reqBody, additionalBody);
+  }
+  
+  client.search(reqBody).then(data => {
+    res.json({ results: data.hits.hits }); // array of search results
+  }, err => {
+    console.log(err.message);
+    return res.json(err.message);
+  });
+}
+
+const getCategoryResults = (req, res) => {
   client.search({
     index: 'articles',
     type: 'article',
@@ -18,7 +51,7 @@ const getSearchResults = (req, res) => {
       },
       query: {
         match: {
-          content1: req.params.query
+          category: req.params.category
         }
       }
     }
@@ -31,5 +64,6 @@ const getSearchResults = (req, res) => {
 }
 
 const searchRouter = require('express').Router();
-searchRouter.get('/:query', getSearchResults);
+searchRouter.get('/category/:category', getCategoryResults);
+searchRouter.get(['/:query', '/'], getSearchResults);
 module.exports = searchRouter;
