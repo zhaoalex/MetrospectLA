@@ -74,7 +74,7 @@ class LandingPage extends React.Component {
         <div id="about-us">
           <div className="about-us-text">
             <h1 id="about_header">ABOUT US</h1>
-            <p id="about_us_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi enim velit, aliquam ac posuere ac, pulvinar quis elit. Nam viverra dolor vitae nibh imperdiet venenatis. Etiam at posuere nisi. Sed condimentum nulla at rutrum faucibus. Pellentesque id nibh dui.</p>
+            <p id="about_us_description">Metrospect started as a Creative Labs project in spring of 2018. Our team is a passionate group of developers, designers, and content creators who love all that is LA. Let's explore the cultural richness of LA together. Let's go on an adventure.</p>
           </div>
           <div className="about-us-pics">
             <img id="team_pic" src={require('./images/team.jpg')} alt="We the squad." />
