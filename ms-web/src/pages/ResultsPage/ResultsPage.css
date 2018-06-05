@@ -52,6 +52,14 @@
   margin: 0 120px;
 }
 
+.results-header-contents #search_form, .results-header-contents #search_button  {
+  margin-top:12px;
+}
+
+.results-header-contents #search_button  {
+  color: white;
+}
+
 @media (max-width: 768px) {
   .results-contents {
     max-width: initial;

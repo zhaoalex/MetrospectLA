@@ -16,6 +16,7 @@ function CategoryIcon(props) {
   return <IconTag
     className={[props.className, "category-icon", `category-icon-${category.toLowerCase()}`].join(' ')}
     fill={props.fill}
+    transparent={props.transparent}
     size={props.size} />
 }
 

@@ -10,7 +10,7 @@ function PlayIcon(props) {
       fill={props.fill ? "#FF6745" : "none"}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="46" cy="46" r="46" fill={props.fill ? "#FF6745" : "#C4C4C4"} />
+      <circle cx="46" cy="46" r="46" fill={props.fill ? "#FF6745" : (props.transparent ? "none" : "#C4C4C4")} />
       <circle
         cx="22"
         cy="22"
