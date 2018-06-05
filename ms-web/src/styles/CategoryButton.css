@@ -17,3 +17,7 @@
   font-size: 1.5em;
   letter-spacing: 0.1875em;
 }
+
+.category-button a {
+  text-decoration: none;
+}

@@ -24,7 +24,7 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="search-bar">
+      <div className={["search-bar", this.props.className].join(' ')}>
         <form onSubmit={this.onSubmit}>
           <FormGroup>
             <InputGroup>
