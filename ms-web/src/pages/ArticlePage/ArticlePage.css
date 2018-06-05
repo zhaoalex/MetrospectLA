@@ -1,24 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Overpass');
-
-@font-face {
-    font-family: 'Overpass';
-    src: url('https://fonts.googleapis.com/css?family=Overpass');
-}
-
-body, text, h1, h2, h3, h4, h5, h6, div {
-  font-family: 'Roboto', sans-serif;
-}
-
 .whiteDiv {
   width: 22px;
   background-color: #FFFFFF;
   height: 100%;
   position: absolute;
-  right: 0px;
+  right: 0;
 }
 
 .inline {
-  display:inline-block;
+  display: inline-block;
   float: left;
 }
 
@@ -27,20 +16,18 @@ body, text, h1, h2, h3, h4, h5, h6, div {
 }
 
 .title {
-  font-size: 48px;
-  font-weight: lighter;
-  font-family: 'Overpass';
-  color: #FFFFFF;
+  font: lighter 3.25em/1.2 'Overpass', sans-serif;
+  color: white;
   font-weight: 1000;
-  margin: 25px 0px 15px 0px;
+  margin: 25px 0 15px 0;
 }
 
 .location {
-  font-size: 16px;
-  color: #FFFFFF;
+  font-size: 1em;
+  color: white;
   font-weight: 100;
-  display:inline;
-  margin: 0px;
+  display: inline;
+  margin: 0;
 }
 
 .location_div {
@@ -52,7 +39,7 @@ body, text, h1, h2, h3, h4, h5, h6, div {
 }
 
 .oneLiner {
-  font-size: 20px;
+  font-size: 1.2em;
   color: #FFFFFF;
   font-weight: 500 ;
 }
@@ -62,7 +49,7 @@ body, text, h1, h2, h3, h4, h5, h6, div {
   display: flex;
   flex-direction: row;
   vertical-align: middle;
-  padding: 0px;
+  padding: 0;
   background-color: #FFFFFF;
 }
 
@@ -72,15 +59,9 @@ body, text, h1, h2, h3, h4, h5, h6, div {
   border-width: 5px;
   border-color: #FFFFFF;
   background-color: #FFFFFF;
-  padding: 0px;
+  padding: 0;
   display:inline;
   width: 100%;
-}
-
-p {
-  font-size: 18px;
-  font-style: normal;
-  color: #9F9F9F;
 }
 
 .imageStyle {
@@ -95,7 +76,7 @@ p {
   /* margin-left: auto;
   margin-right: auto;
   width: 100%; */
-  display:inline;
+  display: inline;
   height: 13px;
   margin-right: 4px;
 }
@@ -136,26 +117,28 @@ p {
 }
 
 .whiteTextStyle {
-  color: #FFFFFF;
-  font-family: 'Roboto', sans-serif;
+  color: white;
+  font: 'Roboto', sans-serif;
 
 }
 
 .body {
-  padding: 0px;
+  padding: 0;
 }
 
 .bodyTitleStyle {
   color: #FF6745;
   padding-bottom: 20px;
-  font-family: 'Overpass';
-  font-size: 36px;
-  font-weight: 800;
+  font: 800 2.25em 'Overpass', sans-serif;
+}
+
+.article-card-contents {
+  padding: 0 10px;
 }
 
 @media (min-width: 768px) {
   .noPadding {
-      padding-left: 0px;
-      padding-right: 0px;
+      padding-left: 0;
+      padding-right: 0;
   }
 }

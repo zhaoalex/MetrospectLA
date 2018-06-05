@@ -1,14 +1,19 @@
 .category-button {
   border: none;
   margin: 10px;
-  background-color: brown;
+  background-color: transparent;
+  text-align: center;
+}
+
+.category-button-active {
+
 }
 
 .category-button-img {
   border-radius: 75%;
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.25);
 }
 
-.category-button:hover {
-
+.category-button p {
+  font-size: 1.5em;
+  letter-spacing: 0.1875em;
 }

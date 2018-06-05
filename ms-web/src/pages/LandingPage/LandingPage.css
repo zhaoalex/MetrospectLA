@@ -6,9 +6,13 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  background-color: white;
   height: 85%;
   min-height: 25em;
+  padding: 10px;
+}
+
+#header > h1 {
+  color: #FF6745;
 }
 
 #tagLineDiv {
@@ -30,6 +34,85 @@
 }
 
 #featured {
+  background-color: #FF6745;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.featured-contents {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.featured-contents-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.featured-show-more {
+  font-size: 1.25em;
+  color: #FFECE8;
+  text-decoration: underline;
+}
+
+#about-us {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+}
+
+.about-us-text {
+  margin: 0 10px;
+  flex: 50%;
+}
+
+.about-us-pics {
+  margin: 0 10px;
+  flex: 50%;
+}
+
+#footer {
+  background-color: #FF6745;
+}
+
+.footer-contents {
+  padding: 10px;
+  margin: 0 5px;
+  text-align: center;
+}
+
+.footer-contents > h4 {
+  margin: 5px;
+  color: #FFECE8;
+}
+
+@media (max-width: 768px) {
+  #featured {
+    padding: 10px 0;
+  }
+
+  .featured-contents {
+    width: 100%;
+    text-align: center;
+  }
+
+  .featured-contents-cards {
+    text-align: initial;
+  }
+
+  .featured-contents > h1, .featured-contents > a {
+    text-align: center;
+  }
+
+  #about-us {
+    max-width: 100%;
+    margin: 0 10px;
+    flex-direction: column;
+  }
 }

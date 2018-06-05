@@ -1,14 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Col } from 'react-bootstrap';
 import CategoryIcon from 'components/CategoryIcon.jsx';
 import "styles/ArticleCard.css";
 
 class ArticleCard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   getArticlePreviewImage = img =>
     <img
       className="article-card-image"
@@ -16,31 +12,26 @@ class ArticleCard extends React.Component {
       alt={this.props.title}
     />
 
-  // getCategoryImage = category =>
-  //   <img
-  //     className="article-card-icon"
-  //     src={require(`../../public/categories/${category.toLowerCase()}.jpg`)}
-  //     alt={category}
-  //   />
-
   render() {
+    const {id, title, desc, category, img, showCategory } = this.props;
+
     return (
       <div className="article-card-wrapper">
         <Grid fluid className="article-card">
-          <Link to={"/articles"}>
-            <Col md={4} xs={4} className="article-card-image-container">
-              {this.getArticlePreviewImage(this.props.img)}
+          <Link to={`/articles/${id}`}>
+            <Col md={5} xs={5} className="article-card-image-container">
+              {this.getArticlePreviewImage(img)}
             </Col>
-            <Col md={8} xs={8} className="article-card-contents">
-              {this.props.showCategory && <div className="article-card-contents-spacer" />}
-              {this.props.showCategory && <CategoryIcon category={this.props.category} className="article-card-icon" />}
-              <h2 style={{ margin: "5px 0" }}>{this.props.title}</h2>
+            <Col md={7} xs={7} className="article-card-contents">
+              {showCategory && <div className="article-card-contents-spacer" />}
+              {showCategory && <CategoryIcon fill category={category} className="article-card-icon" />}
+              <h2 className={["article-card-contents-title", category].join(' ')}>{title}</h2>
               <div className="article-card-contents-summaries">
                 <p>Thing</p>
                 <p>Thing</p>
                 <p>Thing</p>
               </div>
-              <p>{this.props.desc}</p>
+              <p>{desc}</p>
             </Col>
           </Link>
         </Grid>

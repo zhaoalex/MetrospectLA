@@ -1,27 +1,46 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import CategoryIcon from 'components/CategoryIcon.jsx';
 import "styles/CategoryButton.css";
+import { timingSafeEqual } from 'crypto';
 
 class CategoryButton extends React.Component {
   constructor(props) {
     super(props);
+    this.onMouseEnter = this.onMouseEnter.bind(this);
+    this.onMouseLeave = this.onMouseLeave.bind(this);
+    this.state = {
+      hovering: false
+    };
   }
 
-  redirect = category => {
-    this.props.history.push(`/${category}`);
+  onMouseEnter = () => {
+    this.setState({
+      hovering: true
+    });
+  }
+
+  onMouseLeave = () => {
+    this.setState({
+      hovering: false
+    });
   }
 
   render() {
     const { category } = this.props;
 
     return (
-      <div className="category-button">
-        <Link to={`/${category.toLowerCase()}`}>
-          <CategoryIcon category={category} className="category-button-img" />
+      <div className="category-button" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
+        <NavLink to={`/${category.toLowerCase()}`} activeClassName="category-button-active">
+          <CategoryIcon
+            category={category}
+            className={`category-button-img category-button-${category.toLowerCase()}`}
+            size={75}
+            fill={this.state.hovering}
+          />
           <br />
-          {category}
-        </Link>
+          <p>{category.toUpperCase()}</p>
+        </NavLink>
       </div>
     )
   }

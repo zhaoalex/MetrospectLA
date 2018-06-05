@@ -6,29 +6,29 @@
 
 .article-card {
   padding: 0;
-  border: 1px solid black;
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.15);
   height: 200px;
   max-width: 400px;
-  margin: 20px;
+  margin: 10px;
   cursor: pointer;
+  background-color: white;
 }
 
 .article-card-image-container {
   padding: 0;
-  padding-left: 15px;
   height: 100%;
 }
 
 .article-card-image {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .article-card-contents {
   height: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .article-card-contents-spacer {
@@ -42,10 +42,40 @@
   flex-direction: row;
 }
 
+.article-card-contents-title {
+  margin: 5px 0;
+  font-size: 20px;
+  color: #FF6745;
+}
+
+.article-card-contents-title.eat {
+  color: #FFB029;
+}
+.article-card-contents-title.drink {
+  color: #30A5CA;
+}
+.article-card-contents-title.play {
+  color: #FF6745;
+}
+.article-card-contents-title.visit {
+  color: #92CF10;
+}
+
+
+.article-card-contents > p {
+  font-size: 14px;
+}
+
 .article-card-icon {
   margin-bottom: 10px;
   width: 40px;
   height: 40px;
   float: right;
   clear: right;
+}
+
+@media (max-width: 768px) {
+  .article-card-contents > p {
+    font-size: 3vmin;
+  }
 }

@@ -1,0 +1,59 @@
+// home, eat, drink, play, visit
+$category-list: home eat drink play visit;
+$color-list: #333333 #FF6745 #30A5CA #FFB029 #92CF10;
+
+
+.navbar {
+  margin: 0;
+  min-height: 70px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 0%;
+}
+
+.navbar > .container-fluid {
+  margin: auto 15px;
+  // position: relative;
+  // top: 50%;
+  // transform: translateY(50%);
+}
+
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+
+  @media (min-width: 768px) {
+    padding: 15px;
+  }
+}
+
+.navbar-default, .navbar-nav, .navbar-right {
+  > li {
+    margin-left: 25px;
+
+    > a, > a:focus, > .active {
+      color: #9C9C9C;
+      background-color: white;
+      font-size: 18px;
+      font-weight: lighter;
+    }
+
+    @for $i from 1 through length($category-list) {
+      $category: nth($category-list, $i);
+      > .#{$category} {
+        &:hover {
+          color: nth($color-list, $i);
+
+          @media (min-width: 768px) {
+            border-bottom: 3px solid nth($color-list, $i);
+          }
+        }
+
+        > .active {
+          color: nth($color-list, $i);
+        }
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "start": "cd ms-api && yarn start",
+    "build": "yarn && cd ms-api && yarn && cd ../ms-web && yarn",
     "server": "cd ms-api && yarn dev",
     "client": "cd ms-web && yarn start",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
