@@ -86,7 +86,7 @@
     border-bottom: 3px solid rgba(234, 164, 81, 1);
   } */
 
-  .navbar-nav>li.home.active>a, .navbar-nav>li.home>a:hover {
+  /* .navbar-nav>li.home.active>a, .navbar-nav>li.home>a:hover {
     border-bottom: 3px solid #333333;
   }
   .navbar-nav>li.eat.active>a, .navbar-nav>li.eat>a:hover {
@@ -100,7 +100,7 @@
   }
   .navbar-nav>li.visit.active>a, .navbar-nav>li.visit>a:hover {
     border-bottom: 3px solid #92CF10;
-  }
+  } */
   /* .navbar-nav>li {
     border-bottom: 3px solid white;
   } */

@@ -8,29 +8,32 @@
   align-items: center;
   height: 85%;
   min-height: 25em;
-  padding: 10px;
 }
 
 #header > h1 {
   color: #FF6745;
+  font-family: 'Roboto';
+  font-size: 44px;
+  font-weight: 400;
+  margin: 30px;
 }
 
-#tagLineDiv {
-  height: 90px;
+#banner {
+  height: 35%;
   width: 100%;
   background-color: #FF6745;
 }
 
-#tagLine {
-  font-family: 'Roboto';
-  font-size: 44px;
-  font-weight: lighter;
-  color: #FFFFFF;
-}
 
 #quickselect-buttons {
   display: flex;
   flex-direction: row;
+}
+
+h1.section_headers {
+  font-size: 36px;
+  font-family: "Overpass";
+  font-weight: 800;
 }
 
 #featured {
@@ -39,11 +42,17 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding: 10px;
+  padding-bottom: 30px;
+}
+
+#featured_header {
+  color: #FFFFFF;
+  margin-left: 10px;
 }
 
 .featured-contents {
   display: block;
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -52,12 +61,20 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 15px;
+  padding-left: -10px;
 }
 
 .featured-show-more {
   font-size: 1.25em;
   color: #FFECE8;
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  border-bottom: solid 2px #FFFFFF;
+  display: inline;
+  padding-bottom: 3px;
+  font-family: 'Roboto';
+  margin-bottom: 15px;
+  margin-left: 10px;
 }
 
 #about-us {
@@ -65,6 +82,11 @@
   margin: 0 auto;
   padding: 10px;
   display: flex;
+  margin-top: 20px;
+}
+
+#about_header {
+  color: #FF6745;
 }
 
 .about-us-text {
@@ -75,6 +97,18 @@
 .about-us-pics {
   margin: 0 10px;
   flex: 50%;
+}
+
+#team_pic {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 50px;
+  padding-top: 30px;
+}
+
+#about_us_description {
+  font-size: 18px;
+  font-family: 'Roboto';
 }
 
 #footer {

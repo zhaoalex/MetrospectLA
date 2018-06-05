@@ -33,10 +33,11 @@ class SearchBar extends React.Component {
                 value={this.state.searchInput}
                 placeholder="Search"
                 onChange={this.handleChange}
+                id="search_form"
               />
               <InputGroup.Button>
-                <Button type="submit">
-                  <Glyphicon glyph="search" />
+                <Button id="search_button" type="submit">
+                  <Glyphicon id="search_glyph" glyph="search" />
                 </Button>
               </InputGroup.Button>
             </InputGroup>

@@ -2,3 +2,42 @@
   max-width: 50%;
   margin: 10px;
 }
+
+#search_button {
+  border-color: transparent;
+  border-radius: 0px;
+  color: #B6B6B6;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+#search_form {
+  color: #B6B6B6;
+  font-family: 'Roboto';
+  font-size: 30px;
+  font-weight: 200;
+  padding: 30px;
+  border-radius: 9px;
+  border-width: 1px;
+  border-color: #B6B6B6;
+}
+
+#search_form:active, #search_form:focus, #search_button:active, #search_button:focus,  {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: white;
+  background-color: transparent;
+  outline: none;
+  border-color: #B6B6B6
+}
+
+#search_glyph {
+  border-radius: 0px;
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: 0;
+  background: transparent;
+}
