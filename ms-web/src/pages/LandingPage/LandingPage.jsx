@@ -4,14 +4,23 @@ import CategoryButton from 'components/CategoryButton.jsx';
 import SearchBar from 'components/SearchBar.jsx';
 import ArticleCard from 'components/ArticleCard.jsx';
 import { LogoSkyline } from 'components/public';
+import { makeApiRequest } from 'apihandler.js';
 import "./LandingPage.css";
 
 class LandingPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchQuery: null
+      searchQuery: null,
+      results: []
     };
+
+    makeApiRequest('/api/search/')
+      .then(data => {
+        this.setState({
+          results: data.results.slice(0, 4)
+        })
+      })
   }
 
   redirectSearch = query => {
@@ -24,6 +33,18 @@ class LandingPage extends React.Component {
     if (this.state.searchQuery) {
       return <Redirect to={`/search/${this.state.searchQuery}`} />
     }
+
+    const articles = this.state.results && this.state.results.map(r =>
+      <ArticleCard
+        key={r._id}
+        id={r._id}
+        title={r._source.title}
+        desc={r._source.short_description}
+        category={r._source.category}
+        img={r._source.image1}
+        showCategory={!this.props.category}
+      />
+    )
 
     return (
       <div style={{ height: "100vh" }}>
@@ -44,20 +65,7 @@ class LandingPage extends React.Component {
           <div className="featured-contents">
             <h1 id="featured_header">FEATURED</h1>
             <div className="featured-contents-cards">
-              <ArticleCard
-                title="Tacos at Grand Central"
-                desc="Check out one of downtown Los Angeles’ biggest attractions, and the home of many foodstagrams."
-                category="eat"
-                img="src/pages/ArticlePage/images/tacos.png"
-                showCategory
-              />
-              <ArticleCard
-                title="Tacos at Grand Central"
-                desc="Check out one of downtown Los Angeles’ biggest attractions, and the home of many foodstagrams."
-                category="eat"
-                img="src/pages/ArticlePage/images/tacos.png"
-                showCategory
-              />
+              {articles}
             </div>
             <Link to="/search/" className="featured-show-more">View more</Link>
           </div>
