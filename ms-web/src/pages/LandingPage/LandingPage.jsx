@@ -6,7 +6,6 @@ import ArticleCard from 'components/ArticleCard.jsx';
 import { LogoSkyline } from 'components/public';
 import { makeApiRequest } from 'apihandler.js';
 import "./LandingPage.css";
-import TeamPic from './images/team.jpg';
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -78,7 +77,7 @@ class LandingPage extends React.Component {
             <p id="about_us_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi enim velit, aliquam ac posuere ac, pulvinar quis elit. Nam viverra dolor vitae nibh imperdiet venenatis. Etiam at posuere nisi. Sed condimentum nulla at rutrum faucibus. Pellentesque id nibh dui.</p>
           </div>
           <div className="about-us-pics">
-            <TeamPic id="team_pic" alt="We the squad."/>
+            <img id="team_pic" src={require('./Images/team.jpg')} alt="We the squad." />
           </div>
         </div>
         <div id="footer">
