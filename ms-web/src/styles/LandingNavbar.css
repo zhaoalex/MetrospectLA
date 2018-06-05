@@ -14,9 +14,6 @@
 }
 
 .navbar-brand {
-  height: 71px;
-  position: relative;
-  transform: translateY(-9px);
   padding: 0;
 }
 
@@ -25,7 +22,7 @@
   padding: 0;
 }
 
-.navbar-logo-inactive > .navbar-logo-container {
+/* .navbar-logo-inactive > .navbar-logo-container {
   width: 71px;
   background: url('../public/logo-pin.png');
 }
@@ -33,7 +30,7 @@
 .navbar-logo-active > .navbar-logo-container {
   width: 286px;
   background: url('../public/logo-full.png')
-}
+} */
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>li>a
 {
@@ -53,7 +50,7 @@
   background-color: #FFFFFF;
 }
 
-.navbar-default .navbar-nav>li.home>a:hover, .navbar-default .navbar-nav>li.home.active>a  {
+.navbar-default .navbar-nav>li.home>a:hover, .navbar-default .navbar-nav>li.home.active>a {
   color: #333333;
 }
 
@@ -78,6 +75,9 @@
 }
 
 @media (min-width: 768px) {
+  .navbar>.container-fluid .navbar-brand {
+    margin-left: 0;
+  }
   /* .navbar-nav>li:hover {
     background: rgb(197, 116, 18);
   } */
@@ -124,10 +124,10 @@
     padding: 5px;
   }
 
-  .navbar-logo-active > .navbar-logo-container,
+  /* .navbar-logo-active > .navbar-logo-container,
   .navbar-logo-inactive > .navbar-logo-container {
     height: 40px;
     width: 71px;
     background: url('../public/logo-pin.png');
-  }
+  } */
 }

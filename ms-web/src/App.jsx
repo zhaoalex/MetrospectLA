@@ -12,7 +12,7 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div className="app">
-          <LandingNavbar />
+          <Route path="/:active?" component={LandingNavbar} />
           <Switch>
             <Route exact path="/articles" component={ArticlePage} />
             <Route path="/articles/:id" component={ArticlePage} />

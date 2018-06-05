@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import CategoryIcon from 'components/CategoryIcon.jsx';
 import "styles/CategoryButton.css";
-import { timingSafeEqual } from 'crypto';
 
 class CategoryButton extends React.Component {
   constructor(props) {
