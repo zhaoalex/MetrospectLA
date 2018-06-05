@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   min-height: 27em;
+  margin-bottom: 20px;
 }
 
 #header > h1 {
@@ -14,12 +15,13 @@
   font-family: 'Roboto';
   font-size: 44px;
   font-weight: 400;
-  margin: 15px;
+  margin: 20px;
 }
 
 .header-logo {
   text-align: center;
   background-color: #FF6745;
+
 }
 
 .header-logo > svg {
@@ -27,7 +29,8 @@
 }
 
 .header-searchbar {
-  max-width: 70%;
+  max-width: 60%;
+  margin-bottom: 2px;
 }
 
 #quickselect-buttons {
@@ -122,7 +125,7 @@
 
 .footer-contents > h4 {
   margin: 5px;
-  color: #FFECE8;
+  color: #FF6745;
 }
 
 @media (max-width: 768px) {
@@ -158,4 +161,6 @@
     margin: 0 10px;
     flex-direction: column;
   }
+
+
 }

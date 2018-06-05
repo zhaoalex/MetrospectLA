@@ -28,10 +28,10 @@ class LandingPage extends React.Component {
     return (
       <div style={{ height: "100vh" }}>
         <div className="header-logo">
-          <LogoSkyline />
+          <LogoSkyline height={250} width={750}/>
         </div>
         <header id="header">
-          <h1>Making sure everyone gets around!</h1>
+          <h1>Making sure everyone gets around.</h1>
           <SearchBar className="header-searchbar" submit={this.redirectSearch} />
           <div id="quickselect-buttons">
             <CategoryButton category="Eat" />

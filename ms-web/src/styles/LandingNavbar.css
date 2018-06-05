@@ -37,7 +37,7 @@
   color: #9C9C9C;
   background-color: #FFFFFF;
   font-size: 18px;
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 .navbar-default .navbar-nav>li {
@@ -55,7 +55,7 @@
 }
 
 .navbar-default .navbar-nav>li.eat>a:hover, .navbar-default .navbar-nav>li.eat.active>a {
-  color: #FF6745;
+  color: #FFB029;
 }
 
 .navbar-default .navbar-nav>li.drink>a:hover, .navbar-default .navbar-nav>li.drink.active>a {
@@ -63,7 +63,7 @@
 }
 
 .navbar-default .navbar-nav>li.play>a:hover, .navbar-default .navbar-nav>li.play.active>a {
-  color: #FFB029;
+  color: #FF6745;
 }
 
 .navbar-default .navbar-nav>li.visit>a:hover, .navbar-default .navbar-nav>li.visit.active>a {
