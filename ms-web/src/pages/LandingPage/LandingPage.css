@@ -6,8 +6,7 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  height: 85%;
-  min-height: 25em;
+  min-height: 27em;
 }
 
 #header > h1 {
@@ -15,25 +14,25 @@
   font-family: 'Roboto';
   font-size: 44px;
   font-weight: 400;
-  margin: 30px;
+  margin: 15px;
 }
 
-#banner {
-  height: 35%;
-  width: 100%;
+.header-logo {
+  text-align: center;
   background-color: #FF6745;
 }
 
+.header-logo > svg {
+  margin: 50px auto;
+}
+
+.header-searchbar {
+  max-width: 70%;
+}
 
 #quickselect-buttons {
   display: flex;
   flex-direction: row;
-}
-
-h1.section_headers {
-  font-size: 36px;
-  font-family: "Overpass";
-  font-weight: 800;
 }
 
 #featured {
@@ -52,8 +51,9 @@ h1.section_headers {
 
 .featured-contents {
   display: block;
-  width: 60%;
-  margin: 0 auto;
+  width: 70%;
+  max-width: 70%;
+  margin: 10px auto;
 }
 
 .featured-contents-cards {
@@ -62,7 +62,6 @@ h1.section_headers {
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 15px;
-  padding-left: -10px;
 }
 
 .featured-show-more {
@@ -78,7 +77,7 @@ h1.section_headers {
 }
 
 #about-us {
-  max-width: 60%;
+  max-width: 70%;
   margin: 0 auto;
   padding: 10px;
   display: flex;
@@ -127,12 +126,22 @@ h1.section_headers {
 }
 
 @media (max-width: 768px) {
+  .header-logo > svg {
+    width: 350px;
+    margin: 10px auto;
+  }
+
+  .header-searchbar {
+    max-width: 100%;
+  }
+
   #featured {
     padding: 10px 0;
   }
 
   .featured-contents {
     width: 100%;
+    max-width: 100%;
     text-align: center;
   }
 
