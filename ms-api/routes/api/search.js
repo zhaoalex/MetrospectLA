@@ -22,7 +22,7 @@ const getSearchResults = (req, res) => {
       body: {
         ...reqBody.body,
         query: {
-          fuzzy: {
+          match: {
             content1: req.params.query
           }
         }
