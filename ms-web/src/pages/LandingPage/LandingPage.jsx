@@ -75,7 +75,7 @@ class LandingPage extends React.Component {
         <div id="about-us">
           <div className="about-us-text">
             <h1 id="about_header">ABOUT US</h1>
-            <p id="about_us_description">Metrospect started as a Creative Labs project in spring of 2018. Our team is a passionate group of developers, designers, and content creators who love all that is LA. Let's explore the cultural richness of LA together. Let's go on an adventure.</p>
+            <p id="about_us_description">Metrospect started as a Creative Labs project in the spring of 2018. Our team is a passionate group of developers, designers, and content creators who love all that is LA. Let's explore the cultural richness of LA together. Let's go on an adventure.</p>
           </div>
           <div className="about-us-pics">
             <img id="team_pic" src={require('./Images/team.jpg')} alt="We the squad." />
