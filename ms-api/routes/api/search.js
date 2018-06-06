@@ -22,8 +22,11 @@ const getSearchResults = (req, res) => {
       body: {
         ...reqBody.body,
         query: {
-          match: {
-            content1: req.params.query
+          multi_match: {
+            fields: ["content1", "content2"],
+            query: req.params.query,
+            fuzziness: 2,
+            prefix_length: 2
           }
         }
       }
