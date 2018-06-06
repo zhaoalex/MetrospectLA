@@ -73,7 +73,7 @@ class ResultsPage extends React.Component {
         <div className="results-header">
           <div className="results-header-contents">
             {this.props.category &&
-                <CategoryIcon fill={false} transparent={true} size={100} category={this.props.category} className="results-header-icon" />
+                <CategoryIcon transparent={true} size={100} category={this.props.category} className="results-header-icon" />
             }
             <SearchBar className="searchbar" submit={this.updateOnSearch} />
           {//   <p>Price</p>
