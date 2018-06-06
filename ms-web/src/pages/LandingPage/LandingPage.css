@@ -129,6 +129,10 @@
 }
 
 @media (max-width: 768px) {
+  .category-button {
+    margin: 5px;
+  }
+
   .header-logo > svg {
     width: 350px;
     margin: 10px auto;

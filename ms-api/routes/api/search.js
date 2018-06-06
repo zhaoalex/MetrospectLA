@@ -12,7 +12,7 @@ const getSearchResults = (req, res) => {
     type: 'article',
     body: {
       _source: {
-        include: ["title", "keywords", "short_description", "category", "thumbnail"],
+        include: ["title", "keywords", "short_description", "category", "thumbnail", "summary"],
       }
     }
   };
@@ -30,7 +30,7 @@ const getSearchResults = (req, res) => {
     }
     reqBody = Object.assign({}, reqBody, additionalBody);
   }
-  
+
   client.search(reqBody).then(data => {
     res.json({ results: data.hits.hits }); // array of search results
   }, err => {
@@ -45,7 +45,7 @@ const getCategoryResults = (req, res) => {
     type: 'article',
     body: {
       _source: {
-        include: ["title", "keywords", "short_description", "category", "thumbnail"],
+        include: ["title", "keywords", "short_description", "category", "thumbnail", "summary"],
       },
       query: {
         match: {

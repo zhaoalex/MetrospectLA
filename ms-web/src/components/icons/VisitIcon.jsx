@@ -10,7 +10,7 @@ function VisitIcon(props) {
       fill={props.fill ? "#92CF10" : "none"}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="46" cy="46" r="46" fill={props.fill ? "#92CF10" : "#C4C4C4"} />
+      <circle cx="46" cy="46" r="46" fill={props.fill ? "#92CF10" : (props.transparent ? "none" : "#C4C4C4")} />
       <path
         fillRule="evenodd"
         clipRule="evenodd"

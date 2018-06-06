@@ -10,7 +10,7 @@ function DrinkIcon(props) {
       fill={props.fill ? "#30A5CA" : "none"}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="46" cy="46" r="46" fill={props.fill ? "#30A5CA" : "#C4C4C4"} />
+      <circle cx="46" cy="46" r="46" fill={props.fill ? "#30A5CA" : (props.transparent ? "none" : "#C4C4C4")} />
       <path
         d="M41.1429 0H0C0 15.4845 2.84531 24.2222 11.2156 30.9501C11.719 31.3547 12.3538 31.5655 12.9996 31.5713C20.3604 31.6373 20.4269 31.6537 27.3295 31.5736C27.9485 31.5665 28.5581 31.3699 29.051 30.9955C37.8846 24.2872 41.1429 15.8631 41.1429 0Z"
         transform="translate(25 36)"

@@ -63,6 +63,7 @@ class ResultsPage extends React.Component {
         desc={r._source.short_description}
         category={r._source.category}
         img={r._source.thumbnail}
+        summary={r._source.summary}
         showCategory={!this.props.category}
       />
     )
@@ -72,7 +73,7 @@ class ResultsPage extends React.Component {
         <div className="results-header">
           <div className="results-header-contents">
             {this.props.category &&
-                <CategoryIcon fill size={100} category={this.props.category} className="results-header-icon" />
+                <CategoryIcon fill={false} transparent={true} size={100} category={this.props.category} className="results-header-icon" />
             }
             <SearchBar className="searchbar" submit={this.updateOnSearch} />
           {//   <p>Price</p>
