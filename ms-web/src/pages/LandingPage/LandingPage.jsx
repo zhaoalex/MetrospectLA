@@ -41,7 +41,7 @@ class LandingPage extends React.Component {
         title={r._source.title}
         desc={r._source.short_description}
         category={r._source.category}
-        img={r._source.image1}
+        img={r._source.thumbnail}
         showCategory={!this.props.category}
       />
     )

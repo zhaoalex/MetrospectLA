@@ -10,7 +10,8 @@ class ResultsPage extends React.Component {
     super(props);
     this.state = {
       results: [],
-      query: ''
+      query: '',
+      message: 'Getting results...'
     }
 
     const query = (this.props.match && this.props.match.params && this.props.match.params.query) || this.props.category || '';
@@ -19,7 +20,8 @@ class ResultsPage extends React.Component {
       .then(data => {
         this.setState({
           results: data.results,
-          query
+          query,
+          message: data.results.length === 0 ? 'Sorry, no results!' : ''
         });
       })
   }
@@ -32,13 +34,24 @@ class ResultsPage extends React.Component {
       .then(data => {
         this.setState({
           results: data.results,
-          query
+          query,
+          message: data.results.length === 0 ? 'Sorry, no results!' : ''
         });
       })
   }
 
   updateOnSearch = query => {
+    console.log(query)
+    if (query === this.state.query) return;
 
+    makeApiRequest(`/api/search/${query === this.props.category ? `category/${this.props.category}` : query}`)
+      .then(data => {
+        this.setState({
+          results: data.results,
+          query,
+          message: data.results.length === 0 ? 'Sorry, no results!' : ''
+        });
+      })
   }
 
   render() {
@@ -49,7 +62,7 @@ class ResultsPage extends React.Component {
         title={r._source.title}
         desc={r._source.short_description}
         category={r._source.category}
-        img={r._source.image1}
+        img={r._source.thumbnail}
         showCategory={!this.props.category}
       />
     )
@@ -69,7 +82,8 @@ class ResultsPage extends React.Component {
           </div>
         </div>
         <div className="results-contents">
-          {(articles.length !== 0 && articles) || <h2>Getting results...</h2>}
+          {articles}
+          <h2>{this.state.message}</h2>
         </div>
       </div>
     )

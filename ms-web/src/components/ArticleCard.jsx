@@ -1,24 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Grid, Col } from 'react-bootstrap';
+import { Grid, Col, Image } from 'react-bootstrap';
 import CategoryIcon from 'components/CategoryIcon.jsx';
 import "styles/ArticleCard.css";
 
 class ArticleCard extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   getArticlePreviewImage = img =>
-    <img
+    <Image className="article-card-image" src={img} alt={this.props.title} responsive />
+
+    /* {<img
       className="article-card-image"
       src={this.props.img}
       alt={this.props.title}
-    />
+    />} */
 
   render() {
-    const {id, title, desc, category, img, showCategory } = this.props;
+    const { id, title, desc, category, img, showCategory } = this.props;
 
     return (
       <div className="article-card-wrapper">
         <Grid fluid className="article-card">
-          <Link to={`/articles/${id}`}>
+          <Link to={`/article/${id}`}>
             <Col md={5} xs={5} className="article-card-image-container">
               {this.getArticlePreviewImage(img)}
             </Col>

@@ -12,8 +12,7 @@ const getSearchResults = (req, res) => {
     type: 'article',
     body: {
       _source: {
-        include: ["title", "keywords", "short_description", "category", "image1"],
-        exclude: ["summary", "neighborhood", "content1", "content2", "image2", "image3", "image4", "directions"]
+        include: ["title", "keywords", "short_description", "category", "thumbnail"],
       }
     }
   };
@@ -46,8 +45,7 @@ const getCategoryResults = (req, res) => {
     type: 'article',
     body: {
       _source: {
-        include: ["title", "keywords", "short_description", "category", "image1"],
-        exclude: ["summary", "neighborhood", "content1", "content2", "image2", "image3", "image4", "directions"]
+        include: ["title", "keywords", "short_description", "category", "thumbnail"],
       },
       query: {
         match: {

@@ -7,8 +7,16 @@ var client = elasticsearch.Client({
 });
 
 const getArticle = (req, res) => {
-	client.get({
-		id: req.params.id
+	client.search({
+    index: 'articles',
+		type: 'article',
+    body: {
+      query: {
+        match: {
+          _id: req.params.id
+        }
+      }
+    }
 	}).then(data => res.json(data), err => {
 		console.log(err.message)
 		return res.json(err.message)

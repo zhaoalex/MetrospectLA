@@ -1,8 +1,56 @@
-import React from "react";
-import { Grid, Row, Col, Carousel, Image } from 'react-bootstrap';
-import './ArticlePage.css';
+import React from "react"
+import { Grid, Row, Col, Carousel, Image } from 'react-bootstrap'
+import { makeApiRequest } from 'apihandler.js'
+import './ArticlePage.css'
 
 class ArticlePage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: '',
+      neighborhood: '',
+      summary: '',
+      short_description: '',
+      content1: '',
+      content2: '',
+      directions: '',
+      image1: null,
+      image2: null,
+      image3: null,
+      image4: null,
+      map1: null,
+      map2: null
+    };
+
+    /*
+        include: ["title", "keywords", "short_description", "category", "image1"],
+        exclude: ["summary", "neighborhood", "content1", "content2", "image2", "image3", "image4", "directions"]
+    */
+
+    const id = props.match && props.match.params && props.match.params.id;
+
+    makeApiRequest(`/api/article/${id}`)
+      .then(data => {
+        console.log(data.hits.hits[0]);
+        const { title, neighborhood, summary, short_description, content1, content2, directions, image1, image2, image3, image4, map1, map2 } = data.hits.hits[0]._source;
+        this.setState({
+          title,
+          neighborhood,
+          summary,
+          short_description,
+          content1,
+          content2,
+          directions,
+          image1,
+          image2,
+          image3,
+          image4,
+          map1,
+          map2
+        })
+      })
+  }
+
   render() {
     return (
       <Grid fluid className="noPadding">
@@ -12,31 +60,31 @@ class ArticlePage extends React.Component {
               <div className="whiteDiv rightShift"></div>
             </Col>
             <Col xs={12} md={3} lg={3} className=' headerImageDiv'>
-                <Image className="headerImage" src={require("./images/food.png")} responsive/>
+                <Image className="headerImage" src={this.state.image1} responsive/>
                 <div className="whiteDiv inline"></div>
             </Col>
 
             <Col xs={12} md={4} lg={4}>
-              <h2 className="title" >
-                Tacos at Grand Central
+              <h2 className="title">
+                {this.state.title}
               </h2>
               <div className="location_div">
                 <Image className="pin" src={require("./images/pin.png")} responsive/>
-                <h6 className="location" >
-                    LOS ANGELES
+                <h6 className="location">
+                    {this.state.neighborhood}
                 </h6>
               </div>
               <div className="categoryDivStyle">
                 <Row>
                   <Col xs={12}>
-                    <div className="categoryBoxesStyle">$$</div>
-                    <div className="categoryBoxesStyle categoryTripTime">full day</div>
-                    <div className="categoryBoxesStyle">10 mi</div>
+                    <div className="categoryBoxesStyle">{this.state.summary.price}</div>
+                    <div className="categoryBoxesStyle categoryTripTime">{this.state.summary.time}</div>
+                    <div className="categoryBoxesStyle">{this.state.summary.distance}</div>
                   </Col>
                 </Row>
               </div>
               <p className="oneLiner">
-                Check out one of downtown Los Angeles’ biggest attractions, and the home of many foodstagrams.
+                {this.state.short_description}
               </p>
 
             </Col>
@@ -50,40 +98,33 @@ class ArticlePage extends React.Component {
           </Col>
           <Col className="body" sm={8} md={8} lg={8}>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi enim velit, aliquam ac posuere ac, pulvinar quis elit. Nam viverra dolor vitae nibh imperdiet venenatis. Etiam at posuere nisi. Sed condimentum nulla at rutrum faucibus. Pellentesque id nibh dui. Pellentesque laoreet viverra felis. Cras turpis ligula, molestie nec feugiat ut, varius vel mauris. Donec ut vehicula dolor, sit amet consequat augue. Aliquam fringilla iaculis lacus dictum gravida. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+              {this.state.content1}
             </p>
             <Row>
-              <Col sm={4} md={4} lg={4}>
-                <Image className="imageStyle" src={require("./images/temp1.png")} responsive/>
+              <Col sm={6} md={6} lg={6}>
+                <Image className="imageStyle" src={this.state.image2} responsive/>
               </Col>
-              <Col sm={4} md={4} lg={4}>
-                <Image className="imageStyle" src={require("./images/temp2.png")} responsive/>
-              </Col>
-              <Col sm={4} md={4} lg={4}>
-                <Image className="imageStyle" src={require("./images/temp1.png")} responsive/>
+              <Col sm={6} md={6} lg={6}>
+                <Image className="imageStyle" src={this.state.image3} responsive/>
               </Col>
             </Row>
             <p>
-              Vestibulum lacus eros, rutrum quis urna vel, facilisis ornare lectus. Donec feugiat varius eleifend. Donec sem nisl, tristique quis semper eu, gravida id eros. Quisque tempus egestas massa sit amet lacinia. Duis eget tempor quam. Nunc sit amet quam eros. Aliquam venenatis lorem sit amet diam auctor, cursus varius enim hendrerit.
-              Integer vitae mauris mauris. Proin imperdiet ex vitae metus mattis luctus. Fusce fringilla felis pharetra auctor ullamcorper. Phasellus sed mauris dolor. Donec mattis et urna in accumsan. Duis quam lacus, dictum ut velit vitae, scelerisque dictum risus. Donec mattis purus eu feugiat volutpat. Fusce in nulla nec orci luctus pellentesque. Duis in tincidunt odio. Proin sed lobortis purus. Sed rhoncus maximus risus vel posuere.
+              {this.state.content2}
             </p>
-            <Image className="imageStyle" src={require("./images/temp4.png")} responsive/>
+            <Image className="imageStyle" src={this.state.image4} responsive/>
             <h3 className="bodyTitleStyle">
               How to get there
             </h3>
             <p>
-              First, hop on the Rapid 12 towards Palms at Westwood Plaza, right by Ackerman Union. Make sure you have 50¢ handy.
+              {this.state.directions}
             </p>
-            <Image className="imageStyle" src={require("./images/map1.png")} responsive/>
-            <p>
-              Next, you're going to take the Expo Line towards downtown until its terminus, where you'll switch to any Union Station bound metro on the lower platform. Once you get to Pershing Square, Grand Central Market is only a short walk away.
-            </p>
-            <Image className="imageStyle" src={require("./images/map2.png")} responsive/>
+            <Image className="imageStyle" src={this.state.map1} responsive/>
+            <Image className="imageStyle" src={this.state.map2} responsive/>
             <h3 className="bodyTitleStyle">
               While you're here
             </h3>
             <p>
-            Blah blah blah blah blah.
+              Check these places out too!
             </p>
           </Col>
 
