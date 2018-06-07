@@ -1,6 +1,7 @@
 import React from "react"
 import { Grid, Row, Col, Carousel, Image } from 'react-bootstrap'
 import { makeApiRequest } from 'apihandler.js'
+import { LogoPin } from 'components/public';
 import './ArticlePage.css'
 
 class ArticlePage extends React.Component {
@@ -21,11 +22,6 @@ class ArticlePage extends React.Component {
       map1: null,
       map2: null
     };
-
-    /*
-        include: ["title", "keywords", "short_description", "category", "image1"],
-        exclude: ["summary", "neighborhood", "content1", "content2", "image2", "image3", "image4", "directions"]
-    */
 
     const id = props.match && props.match.params && props.match.params.id;
 
@@ -59,7 +55,7 @@ class ArticlePage extends React.Component {
               <div className="boxOne"></div>
               <div className="whiteDiv rightShift"></div>
             </Col>
-            <Col xs={12} md={3} lg={3} className=' headerImageDiv'>
+            <Col xs={12} md={3} lg={3} className="headerImageDiv">
                 <Image className="headerImage" src={this.state.image1} responsive/>
                 <div className="whiteDiv inline"></div>
             </Col>
@@ -69,7 +65,7 @@ class ArticlePage extends React.Component {
                 {this.state.title}
               </h2>
               <div className="location_div">
-                <Image className="pin" src={require("./images/pin.png")} responsive/>
+                <LogoPin width={20} height={20} color="white" />
                 <h6 className="location">
                     {this.state.neighborhood}
                 </h6>
